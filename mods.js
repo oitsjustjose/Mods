@@ -1,25 +1,35 @@
+$(document)
+    .ready(function() {
+        $('.masthead')
+            .visibility({
+                once: false,
+                onBottomPassed: function() {
+                    $('.fixed.menu').transition('fade in');
+                },
+                onBottomPassedReverse: function() {
+                    $('.fixed.menu').transition('fade out');
+                }
+            });
+
+        $('.ui.sidebar')
+            .sidebar('attach events', '.toc.item');
+
+    });
+
 $(function() {
-    $('a.create-a-thon').click(function() {
-        $('.ui.modal.create-a-thon').modal('show');
-        moveDown();
+    $('a.tinkersaddons_bonus').click(function() {
+        $('.ui.modal.tinkersaddons_bonus').modal('show');
     })
 
-    $('a.fantastic_five').click(function() {
-        $('.ui.modal.fantastic_five').modal('show');
-        moveDown();
+    $('a.tinkersaddons_amelioration').click(function() {
+        $('.ui.modal.tinkersaddons_amelioration').modal('show');
     })
 
-    $('a.nissan').click(function() {
-        $('.ui.modal.nissan').modal('show');
-        moveDown();
+    $('a.persistentbits_autoload').click(function() {
+        $('.ui.modal.persistentbits_autoload').modal('show');
     })
 
-    $('a.modding').click(function() {
-        $('.ui.modal.modding').modal('show');
-        moveDown();
+    $('a.persistentbits_indicator').click(function() {
+        $('.ui.modal.persistentbits_indicator').modal('show');
     })
 });
-
-function moveDown() {
-  footer.style.bottom = (footer.style.bottom-14)+'px';
-}
