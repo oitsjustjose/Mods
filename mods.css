@@ -98,3 +98,35 @@
 a {
   cursor: pointer;
 }
+
+body {
+    background-color: #FFFFFF;
+}
+
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
+}
+
+.main.container {
+    margin-top: 3em;
+}
+
+.wireframe {
+    margin-top: 2em;
+}
+
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+}
+
+.descImage {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.deprecated {
+	text-decoration: line-through;
+	text-decoration-color: red;
+}
+

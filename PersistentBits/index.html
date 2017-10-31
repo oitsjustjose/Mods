@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Persistent Bits</title>
+    <link rel="stylesheet" type="text/css" href="../semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../mods.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../semantic/out/semantic.min.js"></script>
+    <script src="../mods.js"></script>
+</head>
+
+<body>
+<!--This is all stuff for the menubar-->
+    <div class="ui large inverted teal top fixed menu">
+        <div class="ui container">
+            <a href=".." class="item">Home</a>
+           	<div class="ui simple dropdown item">
+				<a href="../V-Tweaks/">V-Tweaks</a>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+				  <div class="item"><a href="../V-Tweaks/Mob-Tweaks"><font color="black">Mob Tweaks</font></a></div>
+				  <div class="item"><a href="../V-Tweaks/Enchantments"><font color="black">Enchantments</font></a></div>
+				  <div class="item"><a href="../V-Tweaks/Block-Tweaks"><font color="black">Block Tweaks</font></a></div>
+				  <div class="item"><a href="../V-Tweaks/Item-Tweaks"><font color="black">Item Tweaks</font></a></div>
+				  <div class="item"><a href="../V-Tweaks/Miscellaneous"><font color="black">Miscellaneous</font></a></div>
+				  <div class="item">
+				  	<a href="https://minecraft.curseforge.com/projects/v-tweaks" target="_blank">
+						<font color="black"><i class="download icon"></i>Download!</font>
+				  	</a>
+				  </div>
+				</div>
+		  	</div>
+            <a href="../PersistentBits/" class="item">Persistent Bits</a>
+            <a href="../Pulver/" class="item">Pulver</a>
+            <a href="../TinkersAddons/" class="item">Tinkers Addons</a>
+            <a href="../Geolosys/" class="item">Geolosys</a>
+            <div class="right menu">
+                <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i class="github alternate icon"></i></a>
+                <a href="https://www.youtube.com/channel/UCaau77RpFMoyaHe1vk7Caqw" target="_blank" class="item"><i class="youtube play icon"></i></a>
+                <a href="http://reddit.com/u/oitsjustjose" target="_blank" class="item"><i class="reddit icon"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pusher">
+        <div class="ui vertical stripe quote segment">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+
+                    <div class="column">
+                        <center>
+                            <a class="ui card persistentbits_autoload">
+                                <div class="image">
+                                    <img class="descImage" src="img/3.png">
+                                </div>
+                                <div class="content">
+                                    <div class="header">Easy Chunk Loading</div>
+                                    <span class="meta">And they load themselves on world restart, too!</span>
+                                </div>
+                            </a>
+                        </center>
+                    </div>
+
+
+                    <div class="column">
+                        <center>
+                            <a class="ui card persistentbits_indicator">
+                                <div class="image">
+                                    <img class="descImage" src="img/4.png">
+                                </div>
+                                <div class="content">
+                                    <div class="header">Visible Load Area</div>
+                                    <span class="meta">A vanilla-esque, simplified load indicator</span>
+                                </div>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui vertical stripe segment">
+            <div class="ui text container">
+                <h1 class="ui header"><i class="download icon"></i>Downloads</h1>
+                <p>As with all of my other mods, Persistent Bits is hosted on CurseForge.</p>
+                <a href="https://minecraft.curseforge.com/projects/persistent-bits/files" target="_blank" class="ui large teal button">Download</a>
+            </div>
+        </div>
+
+        <div class="ui vertical stripe quote segment">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+                    <div class="column">
+                        <h3><i class="setting icon"></i>Configurable</h3>
+                        <p>Fully configurable chunk loading range, security, marker blocks and more!</p>
+                    </div>
+                    <div class="column">
+                        <h3><i class="lock icon"></i>Simple Security</h3>
+                        <p>The ability to keep your loaders safe is important! With the security feature, only the placer can break a Chunk Loader!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Modals for each module!-->
+    <div class="ui modal persistentbits_autoload">
+        <i class="close icon"></i>
+        <div class="header">Self-Loading Chunk Loaders</div>
+        <div class="content">
+          One of the first thing I wanted from my Chunk Loaders was for them to start loading automatically. As soon as I figured out how Forge's chunk loading system even worked, I took the time to figure out how I could port some of it to work with Java's serialization.<br><br>
+          If you don't know what that is, don't worry about it. This is what you need to know: Chunk Loaders get added to a list when placed, and removed when broken. Each time the list is modified, it's outputted to a file called "PersistentBits.dat" in your world folder.<br><br>
+          <b>Do not delete this</b>. If your chunk loaders aren't working right, chances are this file has become corrupt (a rare occurrence) - but no worries! Just delete the .dat file, and re-place all of your loaders!
+          <div class="ui segment"><img class="ui image" src="img/1.png"></div>
+        </div>
+    </div>
+
+    <div class="ui modal persistentbits_indicator">
+        <i class="close icon"></i>
+        <div class="header">Loaded Chunk Indicator</div>
+        <div class="content">
+            I've never been a notiriously good programmer - heck, the only reason Persistent Bits' Loaders have a model is because /u/fuami-cake made me one using Chisels and Bits!
+            <br><br>Such being the case, there is no fancy rendering to show you which chunks are loaded. Instead, using vanilla's [F3 + G] shortcut and right-clicking on the chunk loader in question, a client-side strip of blocks (configurable) will appear centered each loaded chunk!<br><br>
+            <div class="ui segment"><img class="ui image" src="img/2.png"></div>
+        </div>
+    </div>
+</body>
+
+</html>

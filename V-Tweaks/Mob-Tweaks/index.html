@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="../../img/favicon.png">
+    <title>V-Tweaks: Mob Tweaks</title>
+    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mods.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../../semantic/out/semantic.min.js"></script>
+    <script src="../../mods.js"></script>
+</head>
+
+<body>
+	<!--This is all stuff for the menubar-->
+    <div class="ui large inverted teal top fixed menu">
+        <div class="ui container">
+            <a href=".." class="item">Home</a>
+           	<div class="ui simple dropdown item">
+				<a href="..">V-Tweaks</a>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+				  <div class="item"><a href="../Mob-Tweaks"><font color="black">Mob Tweaks</font></a></div>
+				  <div class="item"><a href="../Enchantments"><font color="black">Enchantments</font></a></div>
+				  <div class="item"><a href="../Block-Tweaks"><font color="black">Block Tweaks</font></a></div>
+				  <div class="item"><a href="../Item-Tweaks"><font color="black">Item Tweaks</font></a></div>
+				  <div class="item"><a href="../Miscellaneous"><font color="black">Miscellaneous</font></a></div>
+				  <div class="item">
+				  	<a href="https://minecraft.curseforge.com/projects/v-tweaks" target="_blank">
+						<font color="black"><i class="download icon"></i>Download!</font>
+				  	</a>
+				  </div>
+				</div>
+		  	</div>
+            <a href="../../PersistentBits/" class="item">Persistent Bits</a>
+            <a href="../../Pulver/" class="item">Pulver</a>
+            <a href="../../TinkersAddons/" class="item">Tinkers Addons</a>
+            <a href="../../Geolosys/" class="item">Geolosys</a>
+            <div class="right menu">
+                <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i class="github alternate icon"></i></a>
+                <a href="https://www.youtube.com/channel/UCaau77RpFMoyaHe1vk7Caqw" target="_blank" class="item"><i class="youtube play icon"></i></a>
+                <a href="http://reddit.com/u/oitsjustjose" target="_blank" class="item"><i class="reddit icon"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Actual Site Contents, dependent on the page!-->
+    <div class="ui two column stackable grid">
+        <div class="ui main container">
+            <h1>Mob Tweaks</h1>
+            <div class="ui cards">
+                <!--Challenger Mobs-->
+                <a class="ui card challengers">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/challengers.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Challenger Mobs</div>
+                        <span class="meta">Extra challenge for worthwhile loot</span>
+                    </div>
+                </a>
+
+                <!--Mob Drop Buffs-->
+                <a class="ui card dropbuffs">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/dropbuffs.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Mob Drop Buffs</div>
+                        <span class="meta">Re-balancing drops that are too rare</span>
+                    </div>
+                </a>
+
+
+                <!--Feather Plucking-->
+                <a class="ui card plucking">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/plucking.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Feather Plucking</div>
+                        <span class="meta">They don't mind, I promise</span>
+                    </div>
+                </a>
+
+
+                <!--Mob Disabler-->
+                <a class="ui card mob_disabler">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/mob_disabler.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Pesky Mob Purger</div>
+                        <span class="meta">Really, some mobs are annoying!</span>
+                    </div>
+                </a>
+
+                <!--Wither Restriction-->
+                <a class="ui card wither_restriction">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/wither_restriction.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Wither Restriction</div>
+                        <span class="meta">Add challenge to the wither fight!</span>
+                    </div>
+                </a>
+
+
+                <!--Pet Armory-->
+                <a class="ui card pet_armory">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/pet_armory.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Pet Armory</div>
+                        <span class="meta">Protect your pets!!</span>
+                    </div>
+                </a>
+
+                <!--Modals for each module!-->
+                <div class="ui modal challengers">
+                    <i class="close icon"></i>
+                    <div class="header">Challenger Mobs</div>
+                    <div class="content">
+                        Any hostile mob (from any mod) can spawn as a Challenger Mob
+                        <br><br> Challenger Mobs have various classes, configurable loot tables, names, and rarity. They are lots harder than your average mob. All challenger mobs spawn with near-infinite Fire Resistance. Be careful finding these guys!
+                    </div>
+                </div>
+
+                <div class="ui modal dropbuffs">
+                    <i class="close icon"></i>
+                    <div class="header">Mob Drop Buffs</div>
+                    <div class="content">
+                        Chickens, Cows, Skeletons, Squids and Endermen have individually configurable increases in their resourceful drops.
+                        <br><br> The buffs aren't crazy, but they're for resources that make sense to be buffed, like Ender Pearls, Bones, Feathers, Leather and Ink Sacs
+                    </div>
+                </div>
+
+                <div class="ui modal plucking">
+                    <i class="close icon"></i>
+                    <div class="header">Feather Plucking</div>
+                    <div class="content">
+                        Pluck feathers off of chickens with shears!
+                        <br><br> There is a cool-down of approximately 5 minutes, but it doesn't hurt the chicken even though it looks like it does!
+                    </div>
+                </div>
+
+                <div class="ui modal mob_disabler">
+                    <i class="close icon"></i>
+                    <div class="header">Mob Disabler</div>
+                    <div class="content">
+                        Tired of Bats and / or Pig Zombies???
+                        <br><br> V-Tweaks offers an option to prevent either (or both) from spawning. Disabling Pig-Zombies will also reduce Ghast Spawns (because otherwise your Nether would flood with them).
+                    </div>
+                </div>
+
+                <div class="ui modal wither_restriction">
+                    <i class="close icon"></i>
+                    <div class="header">Wither Spawn Restrictions</div>
+                    <div class="content">
+                        Looking to force a challenge or prevent widespread overworld griefing?
+                        <br><br> You can use V-Tweaks to prevent the Wither from being summoned in the Overworld with one simple config option (defaulted to false).
+                    </div>
+                </div>
+
+                <div class="ui modal pet_armory">
+                    <i class="close icon"></i>
+                    <div class="header">Pet Armory</div>
+                    <div class="content">
+                        You can now equip any Tameable entity (from other mods or minecraft) with armor! Right click on them with any variety of Horse Armor and they'll get geared up with armor levels of that type (Iron, Gold or Diamond).
+                        <br><br><b>Note: This will not render the armor.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

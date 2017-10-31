@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="../img/favicon.png">
+    <title>V-Tweaks: Block Tweaks</title>
+    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mods.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../../semantic/out/semantic.min.js"></script>
+    <script src="../../mods.js"></script>
+</head>
+
+<body>
+	<!--This is all stuff for the menubar-->
+    <div class="ui large inverted teal top fixed menu">
+        <div class="ui container">
+            <a href=".." class="item">Home</a>
+           	<div class="ui simple dropdown item">
+				<a href="..">V-Tweaks</a>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+				  <div class="item"><a href="../Mob-Tweaks"><font color="black">Mob Tweaks</font></a></div>
+				  <div class="item"><a href="../Enchantments"><font color="black">Enchantments</font></a></div>
+				  <div class="item"><a href="../Block-Tweaks"><font color="black">Block Tweaks</font></a></div>
+				  <div class="item"><a href="../Item-Tweaks"><font color="black">Item Tweaks</font></a></div>
+				  <div class="item"><a href="../Miscellaneous"><font color="black">Miscellaneous</font></a></div>
+				  <div class="item">
+				  	<a href="https://minecraft.curseforge.com/projects/v-tweaks" target="_blank">
+						<font color="black"><i class="download icon"></i>Download!</font>
+				  	</a>
+				  </div>
+				</div>
+		  	</div>
+            <a href="../../PersistentBits/" class="item">Persistent Bits</a>
+            <a href="../../Pulver/" class="item">Pulver</a>
+            <a href="../../TinkersAddons/" class="item">Tinkers Addons</a>
+            <a href="../../Geolosys/" class="item">Geolosys</a>
+            <div class="right menu">
+                <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i class="github alternate icon"></i></a>
+                <a href="https://www.youtube.com/channel/UCaau77RpFMoyaHe1vk7Caqw" target="_blank" class="item"><i class="youtube play icon"></i></a>
+                <a href="http://reddit.com/u/oitsjustjose" target="_blank" class="item"><i class="reddit icon"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Actual Site Contents, dependent on the page!-->
+    <div class="ui two column stackable grid">
+        <div class="ui main container">
+            <h1>Block Tweaks</h1>
+            <div class="ui cards">
+                <!--Crop Harvesting-->
+                <a class="ui card crop_harvesting">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/crop_harvesting.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Easy Crop Harvesting</div>
+                        <span class="meta">Replanting is a thing of the past</span>
+                    </div>
+                </a>
+
+                <!--Extra Bonemealing-->
+                <a class="ui card bonemeal">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/bonemeal.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Extra Bonemealing</div>
+                        <span class="meta">Bonemeal interactions expanded</span>
+                    </div>
+                </a>
+
+                <!--Reusable Cakes-->
+                <a class="ui card cake_drop">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/cake_drop.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Re-Usable Cakes</div>
+                        <span class="meta">It's not a lie anymore!</span>
+                    </div>
+                </a>
+
+                <!--Tool Eff Tweaks-->
+                <a class="ui card tool_efficiency">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/tool_efficiency.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Extra Tool Efficiencies</div>
+                        <span class="meta">Adding the right tool for more blocks</span>
+                    </div>
+                </a>
+
+                <!--Torch Helper-->
+                <a class="ui card torch_helper">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/torch_helper.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Torch Helper</div>
+                        <span class="meta">Cave eploration made easier</span>
+                    </div>
+                </a>
+
+                <!--Glitching Item Fix-->
+                <a class="ui card glitch_fix">
+                    <div class="image">
+                        <img class="descImage" src="../img/screenshots/glitch_fix.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Glitching Item Fix</div>
+                        <span class="meta">Sans 'Items Gone Wild'</span>
+                    </div>
+                </a>
+
+                <!--Modals for each module!-->
+                <div class="ui modal crop_harvesting">
+                    <i class="close icon"></i>
+                    <div class="header">Easy Crop Harvesting</div>
+                    <div class="content">
+					   <img class="descImage" src="../img/screenshots/crop_harvesting.gif">
+                        Right-Clicking on crops will do all the work of harvesting for you!!
+                        <br><br> Right clicking (empty hand or not!) will earn you not only the original drop of the crop, but even some of the bonus seeds that you'd normally get (minus one, of course, to account for what's been re-planted for you).
+                        Works with most plantables, assuming they follow similar code to Vanilla.
+                    </div>
+                </div>
+
+                <div class="ui modal bonemeal">
+                    <i class="close icon"></i>
+                    <div class="header">Extra Bonemealing</div>
+                    <div class="content">
+                        Ever been annoyed by things you can't bonemeal?
+                        <br><br> With V-Tweaks, you can now bonemeal Cactus and Sugar Cane (up to their natural 3-block-tall limit), and use blaze-powder on Netherwart!
+
+                    </div>
+                </div>
+
+                <div class="ui modal cake_drop">
+                    <i class="close icon"></i>
+                    <div class="header">Re-usable Cakes</div>
+                    <div class="content">
+                        Breaking a completely un-eaten cake will drop itself. FINALLY! HAVE YOUR CAKE AND EAT IT TOO!
+                    </div>
+                </div>
+
+                <div class="ui modal tool_efficiency">
+                    <i class="close icon"></i>
+                    <div class="header">Tool Efficiency Tweaks</div>
+                    <div class="content">
+                        Pretty self-explanatory. Things that should break easier with certain tools do (skulls, levers, glass, pistons with picks, hay with shears and axes, etc.).
+                    </div>
+                </div>
+
+                <div class="ui modal torch_helper">
+                    <i class="close icon"></i>
+                    <div class="header">Torch Helper</div>
+                    <div class="content">
+					   <img class="descImage" src="../img/screenshots/torch_helper.gif">
+                        Having your hands full is a pain - so is switching around your hotbar.
+                        <br><br> The Torch Helper tweak allows you to right-click with any generic tool item and place a torch. Special Conditions: Empty Offhand, and mod compatibility works if the item you want placed as a torch has the word torch in
+                        its localized name (i.e. what "torch" is in your language").
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui modal glitch_fix">
+                <i class="close icon"></i>
+                <div class="header">Glithing Item Fix</div>
+                <div class="content">
+				   <img class="descImage" src="../img/screenshots/glitch_fix.gif">
+                    Nobody likes glitching items.
+                    <br><br> When enabled, item frames, their stored items, paintings and records from jukeboxes all go straight to your feet instead of falling out near the original location.
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+
+</html>
