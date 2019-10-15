@@ -6,154 +6,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="icon" href="../../img/favicon.png">
+    <link rel="icon" href="../../Resources/logo.png">
     <title>V-Tweaks: Miscellaneous</title>
-    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="../../mods.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="../../semantic/out/semantic.min.js"></script>
-    <script src="../../mods.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Libraries/semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../site.css">
+    <script src="../../Libraries/jquery-3.1.1.js"></script>
+    <script src="../../Libraries/semantic/out/semantic.min.js"></script>
+    <script src="../../site.js"></script>
 </head>
 
 <body>
-	<!--This is all stuff for the menubar-->
+    <!--This is all stuff for the menubar-->
     <div class="ui large inverted teal top fixed menu">
         <div class="ui container">
-            <a href=".." class="item">Home</a>
-           	<div class="ui simple dropdown item">
-				<a href="..">V-Tweaks</a>
-				<i class="dropdown icon"></i>
-				<div class="menu">
-				  <div class="item"><a href="../Mob-Tweaks"><font color="black">Mob Tweaks</font></a></div>
-				  <div class="item"><a href="../Enchantments"><font color="black">Enchantments</font></a></div>
-				  <div class="item"><a href="../Block-Tweaks"><font color="black">Block Tweaks</font></a></div>
-				  <div class="item"><a href="../Item-Tweaks"><font color="black">Item Tweaks</font></a></div>
-				  <div class="item"><a href="../Miscellaneous"><font color="black">Miscellaneous</font></a></div>
-				  <div class="item">
-				  	<a href="https://minecraft.curseforge.com/projects/v-tweaks" target="_blank">
-						<font color="black"><i class="download icon"></i>Download!</font>
-				  	</a>
-				  </div>
-				</div>
-		  	</div>
-            <a href="../../PersistentBits/" class="item">Persistent Bits</a>
-            <a href="../../Pulver/" class="item">Pulver</a>
-            <a href="../../TinkersAddons/" class="item">Tinkers Addons</a>
-            <a href="../../Geolosys/" class="item">Geolosys</a>
-            <div class="right menu">
-                <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i class="github alternate icon"></i></a>
-                <a href="https://www.youtube.com/channel/UCaau77RpFMoyaHe1vk7Caqw" target="_blank" class="item"><i class="youtube play icon"></i></a>
-                <a href="http://reddit.com/u/oitsjustjose" target="_blank" class="item"><i class="reddit icon"></i></a>
+            <div class="ui dropdown item">
+                Menu
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="../.." class="item">Home</a>
+                    <div class="active item" onclick="location.href='..'">
+                        <i class="dropdown icon"></i>
+                        <span class="text">V-Tweaks</span>
+                        <div class="menu">
+                            <a class="item" href="../Mob-Tweaks">Mob Tweaks</a>
+                            <a class="item" href="../Enchantments">Enchantments</a>
+                            <a class="item" href="../Block-Tweaks">Block Tweaks</a>
+                            <a class="item" href="../Item-Tweaks">Item Tweaks</a>
+                            <a class="active item" href="../Miscellaneous">Miscellaneous</a>
+                        </div>
+                    </div>
+                    <!-- <div class="item">Archive</div> -->
+                    <div class="item" onclick="location.href='../../PersistentBits'">Persistent Bits</div>
+                    <div class="item" onclick="location.href='../../Pulver'">Pulver</div>
+                    <div class="item" onclick="location.href='../../TinkersAddons'">Tinkers Addons</div>
+                    <div class="item" onclick="location.href='../../Geolosys'">Geolosys</div>
+                    <div class="item">
+                        <div class="ui slider checkbox" style="margin-top: .5em;">
+                            <label>Dark Mode</label>
+                            <input name="darkmode" type="checkbox">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!--Actual Site Contents, dependent on the page!-->
-    <div class="ui two column stackable grid">
-        <div class="ui main container">
-            <h1>Miscellaneous Tweaks</h1>
-            <div class="ui cards">
-                <!--Base Game Changes-->
-                <a class="ui card base_game">
-                    <div class="image">
-                        <img class="descImage" src="../img/screenshots/base_game.png">
-                    </div>
-                    <div class="content">
-                        <div class="deprecated header">Base Game Changes</div>
-                        <span class="meta">An alternate way to play</span>
-                    </div>
-                </a>
-
-                <!--Horse Armor Recipes-->
-                <a class="ui card horse_armor">
-                    <div class="image">
-                        <img class="descImage" src="../img/screenshots/horse_armor.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">Horse Armor Crafting</div>
-                        <span class="meta">Forging for your equine companions</span>
-                    </div>
-                </a>
-
-                <!--Stack Size Tweaks-->
-                <a class="ui card stack_tweaks">
-                    <div class="image">
-                        <img class="descImage" src="../img/screenshots/stack_tweaks.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">Stack Tweaks</div>
-                        <span class="meta">Also saves you inventory space!</span>
-                    </div>
-                </a>
-
-                <!--Thunderstorm Queller-->
-                <a class="ui card thunder_storms">
-                    <div class="image">
-                        <img class="descImage" src="../img/screenshots/thunder_storms.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">Thunder Storm Quelling</div>
-                        <span class="meta">Enough with all that noise</span>
-                    </div>
-                </a>
-
-                <!--Food Tooltips-->
-                <a class="ui card food_tooltips">
-                    <div class="image">
-						<img class="descImage" src="../img/screenshots/food_tooltips.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">Extra Tooltips</div>
-                        <span class="meta">No more memorizing values! </span>
-                    </div>
-                </a>
-
-                <!--Modals for each module!-->
-                <div class="ui modal base_game">
-                    <i class="close icon"></i>
-					<div class="deprecated header">Base Game Tweaks</div>
-                    <div class="content">
-                        Looking to spice up your game? Then this is an easy, safe bet to do it!
-                        <br><br> This (disabled by default) feature makes stone drop gravel (or flint), and makes flint the required item for crafting stone tools. Cobblestone can be crafted with a 2x2 of Gravel - allowing the rest of your game to progress like normal.
-                        <br><br><font color="red">This feature has been removed in the newst revisions of V-Tweaks, as it was rarely useful and seen as a hindrance to most.</font>
-                    </div>
+    <div class="ui main container">
+        <h1 class="ui centered header" style="margin-top: 2em;">Miscellaneous Tweaks</h1>
+        <div class="ui center aligned container"
+            style="max-width: 75vw; width:75vw;margin-left: auto;margin-right: auto; margin-bottom: 1em;">
+            <div class="ui right pointing label">Filter by Game Version:</div>
+            <div class="ui buttons">
+                <button class="ui button" onclick="toggleVersion(this, '1.8.x')">1.8.x</button>
+                <button class="ui button" onclick="toggleVersion(this, '1.9.x')">1.9.x</button>
+                <button class="ui button" onclick="toggleVersion(this, '1.10.x')">1.10.x</button>
+                <button class="ui button" onclick="toggleVersion(this, '1.12.x')">1.12.x</button>
+                <button class="ui button" onclick="toggleVersion(this, '1.14.x')">1.14.x</button>
+            </div>
+        </div>
+        <div class="ui centered cards">
+            <!--Base Game Changes-->
+            <a class="ui card base_game">
+                <div class="image">
+                    <img class="ui image" src="../../Resources/img/vtweaks/screenshots/base_game.png">
                 </div>
+                <div class="content">
+                    <div class="header">Base Game Changes</div>
+                    <span class="meta">An alternate way to play</span>
+                </div>
+                <div class="extra content">
+                    <span>
+                        1.8.x, 1.9.x
+                    </span>
+                </div>
+            </a>
 
-                <div class="ui modal horse_armor">
-                    <i class="close icon"></i>
+            <!--Horse Armor Recipes-->
+            <a class="ui card horse_armor">
+                <div class="image">
+                    <img class="ui image" src="../../Resources/img/vtweaks/screenshots/horse_armor.png">
+                </div>
+                <div class="content">
                     <div class="header">Horse Armor Crafting</div>
-                    <div class="content">
-                        Craft horse armor using two pairs of undamaged, matching leggings and some experience!
-                        <br><br>Experience cost is <i><b>not</b></i> configurable.
-                    </div>
+                    <span class="meta">Forging for your equine companions</span>
                 </div>
-
-                <div class="ui modal stack_tweaks">
-                    <i class="close icon"></i>
-                    <div class="header">Stack Size Tweaks</div>
-                    <div class="content">
-                        A very simple concept: things with unnaturally small stack sizes have been increased to 64!
-                    </div>
+                <div class="extra content">
+                    <span>
+                        1.8.x, 1.9.x, 1.10.x, 1.12.x
+                    </span>
                 </div>
+            </a>
 
-                <div class="ui modal thunder_storms">
-                    <i class="close icon"></i>
+            <!--Stack Size Tweaks-->
+            <a class="ui card stack_tweaks">
+                <div class="image">
+                    <img class="ui image" src="../../Resources/img/vtweaks/screenshots/stack_tweaks.png">
+                </div>
+                <div class="content">
+                    <div class="header">Stack Tweaks</div>
+                    <span class="meta">Also saves you inventory space!</span>
+                </div>
+                <div class="extra content">
+                    <span>
+                        1.8.x, 1.9.x, 1.10.x
+                    </span>
+                </div>
+            </a>
+
+            <!--Thunderstorm Queller-->
+            <a class="ui card thunder_storms">
+                <div class="image">
+                    <img class="ui image" src="../../Resources/img/vtweaks/screenshots/thunder_storms.png">
+                </div>
+                <div class="content">
                     <div class="header">Thunder Storm Quelling</div>
-                    <div class="content">
-                        Lightning from Thunder Storms in chunk-loaded chunks can cause some strange ghost light blocks.
-                        <br><br> V-Tweaks remedies this by disabling thunder storms altogether, in a clean fashion. Might be incompatible with mods which depend on thunderstorms though!
-                    </div>
+                    <span class="meta">Enough with all that noise</span>
                 </div>
+                <div class="extra content">
+                    <span>
+                        1.8.x, 1.9.x, 1.10.x, 1.12.x, 1.14.x
+                    </span>
+                </div>
+            </a>
 
-                <div class="ui modal food_tooltips">
-                    <i class="close icon"></i>
+            <!--Food Tooltips-->
+            <a class="ui card food_tooltips">
+                <div class="image">
+                    <img class="ui image" src="../../Resources/img/vtweaks/screenshots/food_tooltips.png">
+                </div>
+                <div class="content">
                     <div class="header">Extra Tooltips</div>
-                    <div class="content">
-                        First is a lightweight alternative to features like AppleCore's hunger overlay: a useful tooltip telling you hunger and saturation
-                        <br><br> Saturation is on a RGB scale from Red to Cyan, Red being worst and Cyan being best. Hunger is shown by Red and faded Red boxes; faded red being half of a hunger haunch, and solid red being a full haunch.
-                        <br><br> Second is a simple little durability tooltip, telling you how many uses the tool has left!
-                        <br><br> Both tooltips are configurable to be on by default, only while sneaking, or off (settings are mutually exclusive).
-                    </div>
+                    <span class="meta">No more memorizing values! </span>
+                </div>
+                <div class="extra content">
+                    <span>
+                        1.8.x, 1.9.x, 1.10.x, 1.12.x, 1.14.x
+                    </span>
+                </div>
+            </a>
+
+            <!--Modals for each module!-->
+            <div class="ui modal base_game">
+                <i class="close icon"></i>
+                <div class="header">Base Game Tweaks</div>
+                <div class="content">
+                    Looking to spice up your game? Then this is an easy, safe bet to do it!
+                    <br><br> This (disabled by default) feature makes stone drop gravel (or flint), and makes flint
+                    the required item for crafting stone tools. Cobblestone can be crafted with a 2x2 of Gravel -
+                    allowing the rest of your game to progress like normal.
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="ui modal horse_armor">
+                <i class="close icon"></i>
+                <div class="header">Horse Armor Crafting</div>
+                <div class="content">
+                    Craft horse armor using two pairs of undamaged, matching leggings and some experience!
+                    <br><br>Experience cost is <i><b>not</b></i> configurable.
+                </div>
+            </div>
+
+            <div class="ui modal stack_tweaks">
+                <i class="close icon"></i>
+                <div class="header">Stack Size Tweaks</div>
+                <div class="content">
+                    A very simple concept: things with unnaturally small stack sizes have been increased to 64!
+                </div>
+            </div>
+
+            <div class="ui modal thunder_storms">
+                <i class="close icon"></i>
+                <div class="header">Thunder Storm Quelling</div>
+                <div class="content">
+                    Lightning from Thunder Storms in chunk-loaded chunks can cause some strange ghost light blocks.
+                    <br><br> V-Tweaks remedies this by disabling thunder storms altogether, in a clean fashion.
+                    Might be incompatible with mods which depend on thunderstorms though!
+                </div>
+            </div>
+
+            <div class="ui modal food_tooltips">
+                <i class="close icon"></i>
+                <div class="header">Extra Tooltips</div>
+                <div class="content">
+                    First is a lightweight alternative to features like AppleCore's hunger overlay: a useful tooltip
+                    telling you hunger and saturation
+                    <br><br> Saturation is on a RGB scale from Red to Cyan, Red being worst and Cyan being best.
+                    Hunger is shown by Red and faded Red boxes; faded red being half of a hunger haunch, and solid
+                    red being a full haunch.
+                    <br><br> Second is a simple little durability tooltip, telling you how many uses the tool has
+                    left!
+                    <br><br> Both tooltips are configurable to be on by default, only while sneaking, or off
+                    (settings are mutually exclusive).
                 </div>
             </div>
         </div>
