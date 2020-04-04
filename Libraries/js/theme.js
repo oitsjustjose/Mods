@@ -3,11 +3,21 @@
  * Handles all things in regards to theming
  */
 
-let themes = {
-    "dark": "../../Libraries/css/dark.css",
-    "moonlight": "../../Libraries/css/moonlight.css",
-    "light": "../../Libraries/css/light.css"
-};
+let themes;
+
+if (location.href.includes("Pages")) {
+    themes = {
+        "dark": "../../Libraries/css/dark.css",
+        "moonlight": "../../Libraries/css/moonlight.css",
+        "light": "../../Libraries/css/light.css"
+    };
+} else {
+    themes = {
+        "dark": "./Libraries/css/dark.css",
+        "moonlight": "./Libraries/css/moonlight.css",
+        "light": "./Libraries/css/light.css"
+    };
+}
 
 let mode = "dark";
 
