@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="../Resources/logo.png">
+    <title>Tinkers' Addons</title>
+    <link rel="stylesheet" type="text/css" href="../Libraries/semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <script src="../Libraries/jquery-3.1.1.js"></script>
+    <script src="../Libraries/semantic/out/semantic.min.js"></script>
+    <script src="../site.js"></script>
+</head>
+
+<body>
+    <!--This is all stuff for the menubar-->
+    <div class="ui large inverted teal top fixed menu">
+        <div class="ui container">
+            <div class="ui dropdown item">
+                Menu
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href=".." class="item">Home</a>
+                    <div class="item" onclick="location.href='../V-Tweaks'">
+                        <i class="dropdown icon"></i>
+                        <span class="text">V-Tweaks</span>
+                        <div class="menu">
+                            <a class="item" href="../V-Tweaks/Mob-Tweaks">Mob Tweaks</a>
+                            <a class="item" href="../V-Tweaks/Enchantments">Enchantments</a>
+                            <a class="item" href="../V-Tweaks/Block-Tweaks">Block Tweaks</a>
+                            <a class="item" href="../V-Tweaks/Item-Tweaks">Item Tweaks</a>
+                            <a class="item" href="../V-Tweaks/Player-Tweaks">Player Tweaks</a>
+                            <a class="item" href="../V-Tweaks/Miscellaneous">Miscellaneous</a>
+                        </div>
+                    </div>
+                    <!-- <div class="item">Archive</div> -->
+                    <div class="item" onclick="location.href='../PersistentBits'">Persistent Bits</div>
+                    <div class="item" onclick="location.href='../Pulver'">Pulver</div>
+                    <div class="active item" onclick="location.href='../TinkersAddons'">Tinkers Addons</div>
+                    <div class="item" onclick="location.href='../Geolosys'">Geolosys</div>
+                    <div class="item">
+                        <div class="ui slider checkbox" style="margin-top: .5em;">
+                            <label>Dark Mode</label>
+                            <input name="darkmode" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Actual Site Contents, dependent on the page!-->
+    <div class="ui container">
+        <h1 class="ui centered header" style="margin-top: 2em;">Tinkers' Addons</h1>
+        <h2 class="ui centered header">Returning Modifiers to Tinkers' Construct in Minecraft 1.8.x+</h2>
+
+        <div class="ui divider">
+        </div>
+
+        <h1 class="ui centered header">
+            Features
+        </h1>
+
+        <div class="ui two column grid">
+            <div class="row">
+                <div class="column">
+                    <img class="ui medium rounded centered image"
+                        src="../Resources/img/tinkersaddons/amelioration_book_item.png">
+                    <h3 class="ui centered header">
+                        Amelioration Book
+                    </h3>
+                    <h4 class="ui medium header">
+                        The amelioration book offers a means to bring back the old "auto-repair" mechanic to modern
+                        Tinkers'. It works just like the old Auto Repair did, repairing faster in the nether, rain,
+                        etc.. Amelioration is levelable up to Level V, just like the original.
+                    </h4>
+                </div>
+                <div class="column">
+                    <img class="ui medium rounded centered image" src="../Resources/img/tinkersaddons/fake_tier.png">
+                    <h3 class="ui centered header">
+                        Upgrade Toolkits
+                    </h3>
+                    <h4 class="ui medium header">
+                        Offers (and exceeds) the original "get an extra modifier" mechanic from older Tinkers'
+                        Construct, allowing you to add up to 4 extra modifiers to a tool. There are no tiers and they
+                        can be applied in any order, but they can only be applied once and progressively increase in
+                        difficulty.
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ui divider">
+        </div>
+
+        <h1 class="ui centered header">
+            Recipes
+        </h1>
+
+
+        <div class="ui centered cards">
+            <a class="ui card amelioration">
+                <div class="image">
+                    <img class="ui image" src="../Resources/img/tinkersaddons/amelioration_book.png">
+                </div>
+                <div class="content">
+                    <div class="header">Amelioration Book</div>
+                </div>
+            </a>
+
+            <a class="ui card toolkits">
+                <div class="image">
+                    <img class="ui image" src="../Resources/img/tinkersaddons/iron_tier.png">
+                </div>
+                <div class="content">
+                    <div class="header">Upgrade Toolkits</div>
+                </div>
+            </a>
+        </div>
+
+        <!--Modals for each module!-->
+        <div class="ui modal amelioration">
+            <i class="close icon"></i>
+            <div class="content">
+                <img class="ui image" src="../Resources/img/tinkersaddons/amelioration_book.png">
+            </div>
+        </div>
+
+        <div class="ui modal toolkits">
+            <i class="close icon"></i>
+            <div class="content">
+                <img class="ui huge centered image" src="../Resources/img/tinkersaddons/all_tiers.gif">
+            </div>
+        </div>
+</body>
+
+</html>

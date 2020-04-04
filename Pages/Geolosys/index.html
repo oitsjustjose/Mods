@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geolosys</title>
+
+    <link rel="shortcut icon" href="Resources/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" id="themekit">
+    <link rel="stylesheet" href="/Libraries/fontawesome/css/all.min.css">
+
+    <script src="/Libraries/js/menu.js"></script>
+    <script src="/Libraries/js/theme.js"></script>
+    <!-- Smooth Loading -->
+    <style>
+        body {
+            transition: opacity ease-in-out 150ms;
+            opacity: 0;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .masthead {
+            height: 40rem;
+            background: url("/Resources/img/geolosys/cover.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50%;
+        }
+
+        .masthead p.content {
+            color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+    <div class="top titlebar">
+
+        <!-- MOBILE MENU ICONS -->
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <a href="/" class="compact item">
+                <span><i class="fa fa-home"></i>&nbsp;Home</span>
+            </a>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Mods&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+
+                <a href="/Pages/Geolosys/" class="compact sub item">
+                    <b>Geolosys</b>
+                </a>
+                <a href="/Pages/V-Tweaks/" class="compact sub item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="compact sub item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="compact sub item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="compact sub item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="compact sub item">
+                    Tinkers Addons
+                </a>
+            </div>
+
+            <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-download"></i>&nbsp;Downloads</span>
+            </a>
+            <a href="https://github.com/oitsjustjose" target="_blank" class="compact item">
+                <span><i class="fab fa-github"></i>&nbsp;GitHub</span>
+            </a>
+
+            <div class="theme-toggle compact item"></div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+
+        <!-- DESKTOP MENU ICONS -->
+
+        <a href="/" class="item">
+            <span><i class="fa fa-home"></i>&nbsp;Home</span>
+        </a>
+        <div class="dropdown item hoverable">
+            <span>
+                Mods&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content ">
+                <a href="/Pages/Geolosys/" class="item">
+                    <b>Geolosys</b>
+                </a>
+                <a href="/Pages/V-Tweaks/" class="item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="item">
+                    Tinkers Addons
+                </a>
+            </div>
+        </div>
+        <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="item">
+            <i class="fa fa-download"></i>
+        </a>
+        <a href="https://github.com/oitsjustjose" target="_blank" class="item">
+            <i class="fab fa-github"></i>
+        </a>
+        <div class="theme-toggle item"></div>
+    </div>
+
+    <div class="masthead">
+        <p class="content">
+            Geolosys
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>
+            Getting Started!
+        </h2>
+
+        <p>
+            To get started with Geolosys, you'll want a field manual! You may start with one, but if you don't you'll
+            want to snag yourself one using this recipe (assuming the pack you're using hasn't changed this):
+        </p>
+
+        <img class="rounded centered image" src="/Resources/img/geolosys/field_manual.png">
+
+        <p>
+            This field manual will tell you <i>everything</i> you need to know about the mod -- what resources are
+            located where, which ones are available, what items you'll need and more.
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h2>
+            Geolosys JSON Configuration
+        </h2>
+
+        <p>
+            For pack developers, you may (and probably will) want to look into customizing the default Geolosys pluton
+            distribution. There's a full ReadTheDocs page for it <a href="https://geolosys.oitsjustjose.com"
+                target="_blank">here</a> if you're interested in learning all the intricacies.
+        </p>
+    </div>
+</body>
+
+</html>

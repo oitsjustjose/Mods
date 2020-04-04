@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Persistent Bits</title>
+
+    <link rel="shortcut icon" href="Resources/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" id="themekit">
+    <link rel="stylesheet" href="/Libraries/fontawesome/css/all.min.css">
+
+    <script src="/Libraries/js/menu.js"></script>
+    <script src="/Libraries/js/theme.js"></script>
+    <!-- Smooth Loading -->
+    <style>
+        body {
+            transition: opacity ease-in-out 150ms;
+            opacity: 0;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .masthead {
+            height: 40rem;
+            background: #aa2222;
+            background: -webkit-gradient(linear, right top, left bottom, from(#4e92ad), to(#aa2222));
+            background: linear-gradient(to bottom left, #4e92ad, #aa2222);
+        }
+    </style>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+    <div class="top titlebar">
+
+        <!-- MOBILE MENU ICONS -->
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <a href="/" class="compact item">
+                <span><i class="fa fa-home"></i>&nbsp;Home</span>
+            </a>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Mods&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+
+                <a href="/Pages/Geolosys/" class="compact sub item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="compact sub item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="compact sub item">
+                    <b>Persistent Bits</b>
+                </a>
+                <a href="/Pages/Pulver/" class="compact sub item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="compact sub item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="compact sub item">
+                    Tinkers Addons
+                </a>
+            </div>
+
+            <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-download"></i>&nbsp;Downloads</span>
+            </a>
+            <a href="https://github.com/oitsjustjose" target="_blank" class="compact item">
+                <span><i class="fab fa-github"></i>&nbsp;GitHub</span>
+            </a>
+
+            <div class="theme-toggle compact item"></div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+
+        <!-- DESKTOP MENU ICONS -->
+
+        <a href="/" class="item">
+            <span><i class="fa fa-home"></i>&nbsp;Home</span>
+        </a>
+        <div class="dropdown item hoverable">
+            <span>
+                Mods&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content ">
+                <a href="/Pages/Geolosys/" class="item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="item">
+                    <b>Persistent Bits</b>
+                </a>
+                <a href="/Pages/Pulver/" class="item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="item">
+                    Tinkers Addons
+                </a>
+            </div>
+        </div>
+        <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="item">
+            <i class="fa fa-download"></i>
+        </a>
+        <a href="https://github.com/oitsjustjose" target="_blank" class="item">
+            <i class="fab fa-github"></i>
+        </a>
+        <div class="theme-toggle item"></div>
+    </div>
+
+    <div class="masthead">
+        <p class="content">
+            Persistent Bits
+            <h2 class="subheader">
+                A Lightweight Chunkloading Mod
+            </h2>
+        </p>
+        <img class="small image" src="/Resources/img/persistentbits/chunk_loader.png">
+    </div>
+
+    <div class="container">
+        <h2>
+            <span><i class="fab fa-youtube"></i>&nbsp;Mod Spotlight</span>
+        </h2>
+        <div class="embed">
+            <iframe src="https://www.youtube.com/embed/tqnH56iCigg" frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h2>
+            Chunk Loading Mechanics
+        </h2>
+
+        <h3>
+            1.14 and Above
+        </h3>
+
+        <p>
+            In 1.14 and newer, Persistent Bits uses the vanilla <span class="code">/forceload</span> mechanic to chunk
+            load. This mechanic doesn't tick blocks such as crops, but still keeps things loaded for functionality's
+            sake. Keep this in mind when you use it for automation -- in the future, block ticking may be implemented.
+        </p>
+
+        <h3>
+            1.12 and Below
+        </h3>
+
+        <p>
+            In 1.12 and older, Persistent Bits uses Forge's Ticket-based Chunk Loading system, which keeps the entire
+            chunk and all blocks within loaded and ticking.
+        </p>
+    </div>
+</body>
+
+</html>
