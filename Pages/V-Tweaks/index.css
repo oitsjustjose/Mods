@@ -1,100 +1,92 @@
 /* SMOOTH LOADING */
 
 body {
-  transition: opacity ease-in-out 150ms;
-  opacity: 0;
+    transition: opacity ease-in-out 150ms;
+    opacity: 0;
 }
 
 .loaded {
-  opacity: 1;
+    opacity: 1;
 }
 
 .masthead {
-  height: 40rem;
+    height: 40rem;
 }
 
 /* In-page navbar */
+
 nav {
-  margin: auto;
-  margin-top: 1rem;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 16px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    margin: auto;
+    margin-top: 1rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* TODO: This needs a media query for mobile..... */
-
 @media (max-width: 767px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-  }
-
-  nav .item:hover:last-of-type,
-  nav .item[active]:last-of-type {
-    border-bottom-left-radius: 16px !important;
-    border-bottom-right-radius: 16px !important;
-    border-top-right-radius: 0px !important;
-  }
-
-  nav .item:hover:first-of-type,
-  nav .item[active]:first-of-type {
-    border-top-left-radius: 16px !important;
-    border-top-right-radius: 16px !important;
-    border-bottom-left-radius: 0px !important;
-  }
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+    nav .item:hover:last-of-type, nav .item[active]:last-of-type {
+        border-bottom-left-radius: 16px !important;
+        border-bottom-right-radius: 16px !important;
+        border-top-right-radius: 0px !important;
+    }
+    nav .item:hover:first-of-type, nav .item[active]:first-of-type {
+        border-top-left-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+        border-bottom-left-radius: 0px !important;
+    }
 }
 
 nav .item {
-  padding: 1rem;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
 }
 
-nav .item:hover,
-nav .item[active] {
-  background-color: #00bee0;
-  animation: Rainbow 20s ease-in-out infinite;
+nav .item:hover, nav .item[active] {
+    background-color: #00bee0;
+    animation: Rainbow 20s ease-in-out infinite;
 }
 
-nav .item:hover:last-of-type,
-nav .item[active]:last-of-type {
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+nav .item:hover:last-of-type, nav .item[active]:last-of-type {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
-nav .item:hover:first-of-type,
-nav .item[active]:first-of-type {
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+nav .item:hover:first-of-type, nav .item[active]:first-of-type {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 section {
-  opacity: 0;
-  max-height: 0;
-  transition: opacity ease-in-out 150ms;
+    display: none;
+    opacity: 0;
+    transition: opacity ease-in-out 150ms;
 }
 
-.shown {
-  max-height: fit-content !important;
-  opacity: 1;
-  transition: opacity ease-in-out 150ms;
+.shown{
+    display: block;
+    opacity: 1;
+    transition:  ease-in-out 150ms;
 }
 
 .card .versions {
-  font-family: "Fira Code";
-  font-size: 12px;
-  font-weight: bold;
-  display: block;
-  text-align: center;
+    font-family: "Fira Code";
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
 }
 
 .modal-content {
-  max-width: 1024px;
+    max-width: 1024px;
 }
