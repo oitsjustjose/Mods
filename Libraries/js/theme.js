@@ -4,9 +4,9 @@
  */
 
 let themes = {
-    "dark": "/Libraries/css/dark.css",
-    "moonlight": "/Libraries/css/moonlight.css",
-    "light": "/Libraries/css/light.css"
+    "dark": "../../Libraries/css/dark.css",
+    "moonlight": "../../Libraries/css/moonlight.css",
+    "light": "../../Libraries/css/light.css"
 };
 
 let mode = "dark";

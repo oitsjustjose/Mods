@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pulver</title>
+
+    <link rel="shortcut icon" href="../../Resources/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" id="themekit">
+    <link rel="stylesheet" href="../../Libraries/fontawesome/css/all.min.css">
+
+    <script src="../../Libraries/js/menu.js"></script>
+    <script src="../../Libraries/js/theme.js"></script>
+    <!-- Smooth Loading -->
+    <style>
+        body {
+            transition: opacity ease-in-out 150ms;
+            opacity: 0;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .masthead {
+            height: 40rem;
+            background: rgb(128, 128, 128);
+            background: -webkit-gradient(linear, right top, left bottom, from(#eeeeee), to(#252525));
+            background: linear-gradient(to bottom left, #eeeeee, #252525);
+        }
+    </style>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+    <div class="top titlebar">
+
+        <!-- MOBILE MENU ICONS -->
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <a href="/" class="compact item">
+                <span><i class="fa fa-home"></i>&nbsp;Home</span>
+            </a>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Mods&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+
+                <a href="/Pages/Geolosys/" class="compact sub item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="compact sub item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="compact sub item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="compact sub item">
+                    <b>Pulver</b>
+                </a>
+                <a href="/Pages/Natural-Progression/" class="compact sub item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="compact sub item">
+                    Tinkers Addons
+                </a>
+            </div>
+
+            <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-download"></i>&nbsp;Downloads</span>
+            </a>
+            <a href="https://github.com/oitsjustjose" target="_blank" class="compact item">
+                <span><i class="fab fa-github"></i>&nbsp;GitHub</span>
+            </a>
+
+            <div class="theme-toggle compact item"></div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+
+        <!-- DESKTOP MENU ICONS -->
+
+        <a href="/" class="item">
+            <span><i class="fa fa-home"></i>&nbsp;Home</span>
+        </a>
+        <div class="dropdown item hoverable">
+            <span>
+                Mods&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content ">
+                <a href="/Pages/Geolosys/" class="item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="item">
+                    V-Tweaks
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="item">
+                    <b>Pulver</b>
+                </a>
+                <a href="/Pages/Natural-Progression/" class="item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="item">
+                    Tinkers Addons
+                </a>
+            </div>
+        </div>
+        <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="item">
+            <i class="fa fa-download"></i>
+        </a>
+        <a href="https://github.com/oitsjustjose" target="_blank" class="item">
+            <i class="fab fa-github"></i>
+        </a>
+        <div class="theme-toggle item"></div>
+    </div>
+
+    <div class="masthead">
+        <p class="content">
+            Pulver
+            <h2 class="subheader">
+                A Dynamic Dust Generation Mod
+            </h2>
+        </p>
+        <img class="small image" src="../../Resources/img/pulver/dust.png">
+    </div>
+
+    <div class="container">
+        <h2>
+            Overview
+        </h2>
+
+        <p>
+            Pulver adds Dusts that don't already exist for ores that have a corresponding Ingot. It does this solely
+            using the Ore Dictionary. It checks to see if there exists some ore (for example, let's
+            use copper), such as <span class="code">copperOre</span>. Then it checks to see if an ingot
+            (<span class="code">copperIngot</span>) exists and makes sure that a dust (<span
+                class="code">copperDust</span>) does <b>not</b> exist. If an item satisfies these conditions, then
+            Pulver will create a new dust and use the center pixel value of the first ingot it finds as an overlay
+            color.
+        </p>
+
+        <h2>
+            Why That's Helpful
+        </h2>
+
+        <p>
+            Many Ore Processors (for example Extra Utils' crusher) use the ore dictionary to automatically add
+            recipes - so this will bridge that gap. If you add your own processing recipe via <span
+                class="code">XML</span> / CraftTweaker / Other, then you'll already have a dust item generated with the
+            correct textures, OreDict names and more.
+        </p>
+    </div>
+</body>
+
+</html>

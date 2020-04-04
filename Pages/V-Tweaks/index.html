@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>V-Tweaks</title>
+
+    <link rel="shortcut icon" href="../../Resources/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" id="themekit">
+    <link rel="stylesheet" href="../../Libraries/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="../../Libraries/js/menu.js"></script>
+    <script src="../../Libraries/js/modal.js"></script>
+    <script src="../../Libraries/js/theme.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+    <div class="top titlebar">
+
+        <!-- MOBILE MENU ICONS -->
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <a href="/" class="compact item">
+                <span><i class="fa fa-home"></i>&nbsp;Home</span>
+            </a>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Mods&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+
+                <a href="/Pages/Geolosys/" class="compact sub item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="compact sub item">
+                    <b>V-Tweaks</b>
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="compact sub item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="compact sub item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="compact sub item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="compact sub item">
+                    Tinkers Addons
+                </a>
+            </div>
+
+            <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-download"></i>&nbsp;Downloads</span>
+            </a>
+            <a href="https://github.com/oitsjustjose" target="_blank" class="compact item">
+                <span><i class="fab fa-github"></i>&nbsp;GitHub</span>
+            </a>
+
+            <div class="theme-toggle compact item"></div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+
+        <!-- DESKTOP MENU ICONS -->
+
+        <a href="/" class="item">
+            <span><i class="fa fa-home"></i>&nbsp;Home</span>
+        </a>
+        <div class="dropdown item hoverable">
+            <span>
+                Mods&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content ">
+                <a href="/Pages/Geolosys/" class="item">
+                    Geolosys
+                </a>
+                <a href="/Pages/V-Tweaks/" class="item">
+                    <b>V-Tweaks</b>
+                </a>
+                <a href="/Pages/Persistent-Bits/" class="item">
+                    Persistent Bits
+                </a>
+                <a href="/Pages/Pulver/" class="item">
+                    Pulver
+                </a>
+                <a href="/Pages/Natural-Progression/" class="item">
+                    Natural Progression
+                </a>
+                <a href="/Pages/Tinkers-Addons/" class="item">
+                    Tinkers Addons
+                </a>
+            </div>
+        </div>
+        <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="item">
+            <i class="fa fa-download"></i>
+        </a>
+        <a href="https://github.com/oitsjustjose" target="_blank" class="item">
+            <i class="fab fa-github"></i>
+        </a>
+        <div class="theme-toggle item"></div>
+    </div>
+
+    <div class="rainbow masthead">
+        <p class="content">
+            V-Tweaks
+            <h2 class="subheader">
+                QOL Modifications to the Vanilla Experience
+            </h2>
+        </p>
+    </div>
+
+    <nav>
+        <div class="item">
+            Block Tweaks
+        </div>
+        <div class="item">
+            Item Tweaks
+        </div>
+        <div class="item">
+            Mob Tweaks
+        </div>
+        <div class="item">
+            Player Tweaks
+        </div>
+        <div class="item">
+            Enchantments
+        </div>
+        <div class="item">
+            Miscellaneous
+        </div>
+    </nav>
+
+    <section for="Block Tweaks">
+        <div class="container">
+            <h2>
+                Block Tweaks
+            </h2>
+
+            <div class="cards">
+
+                <div class="card" for-modal="crop-harvesting">
+                    <h3 class="header">Easy Crop Harvesting</h3>
+                    <h4 class="centered">Replanting is a thing of the past</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/crop_harvesting.png">
+                    </p>
+                    <span class="versions">1.10.x, 1.12.x, 1.14.x</span>
+                </div>
+
+                <div class="card" for-modal="bonemealing">
+                    <h3 class="header">Extra Bonemealing</h3>
+                    <h4 class="centered">Bonemeal Interactions Expanded</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/bonemeal.png">
+                    </p>
+                    <span class="versions">
+                        1.8.x, 1.9.x, 1.10.x, 1.12.x, 1.14.x
+                    </span>
+                </div>
+
+                <div class="card" for-modal="cake-drop">
+                    <h3 class="header">Re-Usable Cakes</h3>
+                    <h4 class="centered">It's not a lie anymore!</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/cake_drop.png">
+                    </p>
+                    <span class="versions">
+                        1.8.x, 1.9.x, 1.10.x, 1.12.x, 1.14.x
+                    </span>
+                </div>
+
+                <div class="card" for-modal="tool-eff">
+                    <h3 class="header">Extra Tool Efficiencies</h3>
+                    <h4 class="centered">Adding the right tool for more blocks</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/tool_efficiency.png">
+                    </p>
+                    <span class="versions">
+                        1.9.x, 1.10.x, 1.12.x, 1.14.x
+                    </span>
+                </div>
+
+                <div class="card" for-modal="torch-helper">
+                    <h3 class="header">Torch Helper</h3>
+                    <h4 class="centered">Cave exploration made easier</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/torch_helper.png">
+                    </p>
+                    <span class="versions">
+                        1.8.x, 1.9.x
+                    </span>
+                </div>
+
+                <div class="card" for-modal="glitching-items">
+                    <h3 class="header">Glitching Item Fix</h3>
+                    <h4 class="centered">Sans 'Items Gone Wild'</h4>
+                    <p class="content">
+                        <img src="../../Resources/img/vtweaks/screenshots/glitch_fix.png">
+                    </p>
+                    <span class="versions">
+                        1.8.x, 1.9.x
+                    </span>
+                </div>
+
+            </div>
+
+            <div id="crop-harvesting" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Easy Crop Harvesting
+                    </h3>
+                    <img class="image" src="../../Resources/img/vtweaks/screenshots/crop_harvesting.gif">
+                    <p>
+                        Right-Clicking on crops will do all the work of harvesting for you!!
+                    </p>
+                    <p>
+                        Right clicking (empty hand or not!) will earn you not only the original drop of the
+                        crop, but even some of the bonus seeds that you'd normally get (minus one, of course, to account
+                        for what's been re-planted for you). Works with most plantables, assuming they follow similar
+                        code to Vanilla.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="bonemealing" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Extra Bonemealing
+                    </h3>
+                    <p>
+                        Ever been annoyed by things you can't bonemeal?
+                    </p>
+                    <p>
+                        With V-Tweaks, you can now bonemeal Cactus and Sugar Cane (up to their natural 3-block-tall
+                        limit), and use blaze-powder on Netherwart!
+                    </p>
+                </div>
+            </div>
+
+            <div id="cake-drop" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Re-usable Cakes
+                    </h3>
+                    <p>
+                        Breaking a completely un-eaten cake will drop itself. FINALLY! HAVE YOUR CAKE AND EAT IT TOO!
+                    </p>
+                </div>
+            </div>
+
+            <div id="tool-eff" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Tool Efficiency Tweaks
+                    </h3>
+                    <p>
+                        Pretty self-explanatory. Things that should break easier with certain tools do (skulls, levers,
+                        glass, pistons with picks, hay with shears and axes, etc.).
+                    </p>
+                </div>
+            </div>
+
+            <div id="torch-helper" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Torch Helper
+                    </h3>
+                    <img class="image" src="../../Resources/img/vtweaks/screenshots/torch_helper.gif">
+                    <p>
+                        Having your hands full is a pain - so is switching around your hotbar.
+                    </p>
+                    <p>
+                        The Torch Helper tweak allows you to right-click with any generic tool item and place a
+                        torch. Special Conditions: Empty Offhand, and mod compatibility works if the item you want
+                        placed as a torch has the word torch in
+                        its localized name (i.e. what "torch" is in your language").
+                    </p>
+                </div>
+            </div>
+
+            <div id="glitching-items" class="modal">
+                <div class="modal-content">
+                    <span class="close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h3 class="header">
+                        Glitching Item Fix
+                    </h3>
+                    <img class="image" src="../../Resources/img/vtweaks/screenshots/glitch_fix.gif">
+                    <p>
+                        Nobody likes glitching items.
+                    </p>
+                    <p>
+                        When enabled, item frames, their stored items, paintings and records from jukeboxes all go
+                        straight to your feet instead of falling out near the original location.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section for="Item Tweaks">
+        <div class="container">
+            <h2>
+                Item Tweaks
+            </h2>
+        </div>
+    </section>
+
+    <section for="Mob Tweaks">
+        <div class="container">
+            <h2>
+                Mob Tweaks
+            </h2>
+        </div>
+    </section>
+
+    <section for="Player Tweaks">
+        <div class="container">
+            <h2>
+                Player Tweaks
+            </h2>
+        </div>
+    </section>
+
+    <section for="Enchantments">
+        <div class="container">
+            <h2>
+                Enchantments
+            </h2>
+        </div>
+    </section>
+
+    <section for="Miscellaneous">
+        <div class="container">
+            <h2>
+                Miscellaneous
+            </h2>
+        </div>
+    </section>
+
+</body>
+
+</html>
