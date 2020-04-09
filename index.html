@@ -4,192 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta property="og:title" content="oitsjustjose's modes">
-    <meta property="og:description" content="A 'Wiki' for all of oitsjustjose's mods">
-    <meta property="og:image" content="https://i.imgur.com/HASXB3g.jpg">
-    <meta property="og:url" content="https://oitsjustjose.com/Mods">
-
-    <meta name="twitter:title" content="oitsjustjose's modes">
-    <meta name="twitter:description" content="A 'Wiki' for all of oitsjustjose's mods">
-    <meta name="twitter:image" content="https://i.imgur.com/HASXB3g.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <title>oitsjustjose's Mods</title>
-
-    <link rel="shortcut icon" href="./Resources/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" id="themekit">
-    <link rel="stylesheet" href="./Libraries/fontawesome/css/all.min.css">
-
-    <script src="./Libraries/js/menu.js"></script>
-    <script src="./Libraries/js/theme.js"></script>
-    <!-- Smooth Loading -->
+    <title>Redirecting..</title>
     <style>
-        body {
-            transition: opacity ease-in-out 150ms;
-            opacity: 0;
+        @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+
+        * {
+            font-family: "Spartan";
+            color: #eeeeee;
+            background-color: #252525;
         }
 
-        .loaded {
-            opacity: 1;
+        a {
+            color: #00bee0;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
         }
     </style>
 </head>
 
-<body onload="document.body.classList.add('loaded')">
-    <div class="top titlebar">
-
-        <!-- MOBILE MENU ICONS -->
-        <div class="mobile-menu">
-            <div class="close-mobile-menu" onclick='toggleMenu()'>
-                <i class="fas fa-times"></i>
-            </div>
-
-            <a href="." class="compact item">
-                <span><i class="fa fa-home"></i>&nbsp;Home</span>
-            </a>
-
-            <div class="compact submenu item" onclick="toggleSubMenu(this)">
-                <span>
-                    Mods&nbsp;<i class="fa fa-caret-right"></i>
-                </span>
-
-                <a href="./Pages/Geolosys/" class="compact sub item">
-                    Geolosys
-                </a>
-                <a href="./Pages/V-Tweaks/" class="compact sub item">
-                    V-Tweaks
-                </a>
-                <a href="./Pages/Persistent-Bits/" class="compact sub item">
-                    Persistent Bits
-                </a>
-                <a href="./Pages/Pulver/" class="compact sub item">
-                    Pulver
-                </a>
-                <a href="./Pages/Natural-Progression/" class="compact sub item">
-                    Natural Progression
-                </a>
-                <a href="./Pages/Tinkers-Addons/" class="compact sub item">
-                    Tinkers Addons
-                </a>
-            </div>
-
-            <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="compact item">
-                <span><i class="fa fa-download"></i>&nbsp;Downloads</span>
-            </a>
-            <a href="https://github.com/oitsjustjose" target="_blank" class="compact item">
-                <span><i class="fab fa-github"></i>&nbsp;GitHub</span>
-            </a>
-
-            <div class="theme-toggle compact item"></div>
-
-            <!-- 
-            <div class="compact item" onclick="toggleDisplayMode()">
-                <span class="display-mode-icon">
-                </span>
-            </div> -->
-        </div>
-
-        <!-- Mobile friendly menu -->
-        <div class="dropdown item compact" onclick='toggleMenu()'>
-            <span>
-                <i class="fa fa-bars"></i>&nbsp;Menu
-            </span>
-        </div>
-
-
-        <!-- DESKTOP MENU ICONS -->
-
-        <a href="" class="item">
-            <span><i class="fa fa-home"></i>&nbsp;Home</span>
-        </a>
-        <div class="dropdown item hoverable">
-            <span>
-                Mods&nbsp;<i class="fa fa-caret-down"></i>
-            </span>
-            <div class="dropdown-content ">
-                <a href="./Pages/Geolosys/" class="item">
-                    Geolosys
-                </a>
-                <a href="./Pages/V-Tweaks/" class="item">
-                    V-Tweaks
-                </a>
-                <a href="./Pages/Persistent-Bits/" class="item">
-                    Persistent Bits
-                </a>
-                <a href="./Pages/Pulver/" class="item">
-                    Pulver
-                </a>
-                <a href="./Pages/Natural-Progression/" class="item">
-                    Natural Progression
-                </a>
-                <a href="./Pages/Tinkers-Addons/" class="item">
-                    Tinkers Addons
-                </a>
-            </div>
-        </div>
-        <a href="https://www.curseforge.com/members/oitsjustjose/" target="_blank" class="item">
-            <i class="fa fa-download"></i>
-        </a>
-        <a href="https://github.com/oitsjustjose" target="_blank" class="item">
-            <i class="fab fa-github"></i>
-        </a>
-        <div class="theme-toggle item"></div>
-    </div>
-
-    <div class="rainbow gradient masthead">
-        <p class="content">
-            <b>oitsjustjose's Mods</b>
-            <span class="subheader">A Website & "Wiki" for all of my mods!</span>
-        </p>
-        <div class="bounce down">
-            <i class="fa fa-angle-down"></i>
-        </div>
-    </div>
-
-    <div class="container">
+<body onload="location.href='https://mods.oitsjustjose.com'">
+    <div class="flex-container">
         <h2>
-            My Collection of Mods
+            If you're seeing this, ****
         </h2>
-
-        <p>
-            A lot of my mods don't self-document -- this means that the mods themselves don't always have a way of
-            telling you how to use them from within the game. I'm working on this, but it's not possible in <i>every</i>
-            situation unfortunately. That's what this site is for! Think of it as a wiki for the undocumented parts of
-            my mods. Most specifically, V-Tweaks, Persistent Bits and Pulver don't "self-document", and you could argue
-            that Natural Progression's tooltips method isn't robust enough for a user who doesn't know what to look for
-            (and I wouldn't disagree!).
-        </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="container">
-        <h2>
-            My Code
-        </h2>
-
-        <p>
-            I keep all my code over at <a href="https://github.com/oitsjustjose" target="_blank"> <i
-                    class="fab fa-github"></i> GitHub</a> if you're interested. All of my mod code is free to use so
-            have
-            at it!
-        </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="container">
-        <h2>
-            About this Site
-        </h2>
-        <p>
-            I'm glad you asked! This site is made using my own scratch-made themekit <a
-                href="https://github.com/oitsjustjose/JuiceUI" target="_blank">JuiceUI</a>. This website and the
-            themekit both refuse to use JQuery -- and for no reason in particular! I love and use JQuery often, but it's
-            a nice challenge using just DOM to do everything! Check out the <a href="https://oitsjustjose.com/JuiceUI"
-                target="_blank">live demo</a> if you want to see what all this themekit is capable of!
-        </p>
+        <h3>
+            This site has moved - you should go here:
+        </h3>
+        <h4>
+            <a href="https://mods.oitsjustjose.com">https://mods.oitsjustjose.com</a>
+        </h4>
     </div>
 </body>
 
