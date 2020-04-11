@@ -23,6 +23,19 @@
         .loaded {
             opacity: 1;
         }
+
+        .masthead {
+            height: 40rem;
+            background: url("/Resources/img/natpro/Cover.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50%;
+        }
+
+        .grid {
+            -ms-grid-columns: (minmax(512px, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+        }
     </style>
 </head>
 
@@ -125,11 +138,84 @@
         <p class="content">
             Natural Progression
             <h2 class="subheader">
-                This Page is Under Construction
+                Slowing Early-Game Progression with Realistic Mechanics
             </h2>
-
-            <i class="fas fa-hard-hat" style="font-size: 48px;"></i>
         </p>
+    </div>
+
+    <div class="container">
+        <h2>
+            What is Natural Progression?
+        </h2>
+        <p>
+            Natural Progression is a mod which changes early game mechanics, forcing you to spend more time in those
+            first stages of Minecraft. It does so through a few mechanics which become self-evident as you play with the
+            mod, but just a <i>few</i> of these are:
+        </p>
+
+        <div class="grid">
+            <div style="max-width: 90vw;">
+                <ul>
+                    <li>No punching wood</li>
+                    <li>No wooden / stone tools (configurable)</li>
+                    <li>Realistic plank crafting</li>
+                    <li>Bone and Flint materials for only specific tools</li>
+                </ul>
+            </div>
+            <div style="max-width: 90vw; width: 512px; margin: auto;">
+                <img class="rounded centered image" src="/Resources/img/natpro/Advancements.png">
+                <p class="centered" style="font-size: 12px;">
+                    Natural Progression replaces the early game advancements as well, so if you get stuck use those
+                    for guidance
+                    as you go along!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h2>
+            Things to Know...
+        </h2>
+        <p>
+            <ol>
+                <li>
+                    Pebbles aren't placed randomly! A pebble on the surface reflects what you'll find below; a diorite
+                    pebble indicates diorite below, sandstone pebble → sandstone, etc.
+                </li>
+                <li>
+                    Twigs will now randomly spawn as well, providing an easier source of sticks.
+                </li>
+                <li>
+                    Twigs and pebbles can be found under water!
+                </li>
+                <li>
+                    You can right-click any of the pebbles or twigs to break them.
+                </li>
+                <li>
+                    Bones can be obtained by killing mobs other than skeletons, if enabled in the config.
+                </li>
+                <li>
+                    All sawing recipes are Datapack-based! If you want to add support for more recipes, just use the
+                    vanilla Datapack method!
+                </li>
+            </ol>
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h2>
+            <span><i class="fab fa-youtube"></i>&nbsp;Mod Spotlight</span>
+        </h2>
+        <div class="embed">
+            <iframe src="https://www.youtube.com/embed/-X1y9IJnXCk?start=134&end=144" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
     </div>
 </body>
 
