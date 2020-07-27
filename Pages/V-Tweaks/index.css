@@ -18,7 +18,9 @@ body {
 nav {
     margin: auto;
     margin-top: 1rem;
-    width: fit-content;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -57,24 +59,24 @@ nav .item:hover, nav .item[active] {
     animation: Rainbow 20s ease-in-out infinite;
 }
 
-nav .item:hover:last-of-type, nav .item[active]:last-of-type {
+nav .item:last-of-type {
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
 }
 
-nav .item:hover:first-of-type, nav .item[active]:first-of-type {
+nav .item:first-of-type {
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
 
 section {
-    display: none;
+    max-height: 0;
     opacity: 0;
     transition: opacity ease-in-out 150ms;
 }
 
 .shown{
-    display: block;
+    max-height: auto;
     opacity: 1;
     transition:  ease-in-out 150ms;
 }
