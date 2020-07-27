@@ -69,16 +69,18 @@ nav .item:first-of-type {
     border-bottom-left-radius: 16px;
 }
 
-section {
-    max-height: 0;
-    opacity: 0;
-    transition: opacity ease-in-out 150ms;
+section:not(.shown), section:not(.shown) * {
+    position: absolute;
+    top: -9999em;
+    max-height: 0 !important;
+    visibility: hidden;
+    opacity: 0 !important;
+    transition: opacity ease-in-out 300ms;
 }
 
-.shown{
-    max-height: auto;
-    opacity: 1;
-    transition:  ease-in-out 150ms;
+.shown, .shown * {
+    opacity: 1 !important;
+    transition:  ease-in-out 300ms;
 }
 
 .card .versions {
