@@ -20,7 +20,7 @@ const routing = (
         <div style={{ paddingTop: `${3.5}em` }}></div>
         <Route exact path="/" component={Home} />
         <Route path="/Geolosys" component={Geolosys} />
-        <Route path="/VTweaks" component={VTweaks} />
+        <Route path="/V-Tweaks" component={VTweaks} />
         <Route path="/PersistentBits" component={PersistentBits} />
         <Route path="/NaturalProgressions" component={NaturalProgressions} />
         <Route path="/TinkersAddons" component={TinkersAddons} />
