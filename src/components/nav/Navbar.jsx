@@ -18,7 +18,7 @@ export default () => {
                     <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
                         <NavItem to="/" name="Home" icon={faHome} />
                         <NavItem to="/Geolosys/" name="Geolosys" icon={null} />
-                        <NavItem to="/VTweaks/" name="V-Tweaks" icon={null} />
+                        <NavItem to="/V-Tweaks/" name="V-Tweaks" icon={null} />
                         <NavItem to="/PersistentBits/" name="Persistent Bits" icon={null} />
                         <NavItem to="/NaturalProgressions/" name="Natural Progressions" icon={null} />
                         <NavItem to="/TinkersAddons/" name="Tinkers' Addons" icon={null} />

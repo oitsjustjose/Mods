@@ -46,7 +46,7 @@ export default () => {
                         They are all configurable (and custom ones can even be added!) so I <i>strongly</i> suggest you
                         consult the Field Manual, crafted like so:
                     </p>
-                    <img className="rounded d-block m-auto mb-3" src="/img/geolosys/field_manual.png" alt="Field Manual Recipe" />
+                    <img className="rounded d-block m-auto mw-100 mb-3" src="/img/geolosys/field_manual.png" alt="Field Manual Recipe" />
                     <p>
                         Once you've obtained one, you'll want to read up about Geolosys from within that manual. It'll tell
                         you all about the types of deposits in the game and where to find them. In order to do so, it'll be
