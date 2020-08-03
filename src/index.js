@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
-import * as serviceWorker from './serviceWorker';
-import Home from './components/Home';
-import Geolosys from './components/mods/Geolosys';
-import VTweaks from './components/mods/V-Tweaks';
-import PersistentBits from './components/mods/Persistent Bits';
-import NaturalProgressions from './components/mods/Natural Progressions';
-import TinkersAddons from './components/mods/Tinkers Addons';
-import Pulver from './components/mods/Pulver';
-import NavBar from './components/nav/Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Geolosys from './components/mods/Geolosys';
+import NaturalProgressions from './components/mods/Natural Progressions';
+import PersistentBits from './components/mods/Persistent Bits';
+import Pulver from './components/mods/Pulver';
+import TinkersAddons from './components/mods/Tinkers Addons';
+import VTweaks from './components/mods/V-Tweaks';
+import NavBar from './components/nav/Navbar';
+import './css/app.css';
+import * as serviceWorker from './serviceWorker';
 
 const routing = (
     <Router>
