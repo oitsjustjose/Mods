@@ -134,25 +134,6 @@ export default () => {
           </div>
         )}
 
-        {/* <div id="searchResults" className={`container w-100 h-100 justify-content-center align-items-center ${state.searching ? 'd-flex' : 'd-none'}`}>
-          {state.searchFeatures && state.searchFeatures.map((feature) => (
-            <div className="card h-100 pb-4">
-              <img src={feature.img} alt="" className="card-img-top" />
-              <div className="card-body">
-                <h5 className="text-center card-title">
-                  {feature.name}
-                </h5>
-                <p className="card-text mb-1">
-                  {feature.desc}
-                </p>
-                <pre className="text-center game-version">
-                  {feature.versions.join(', ')}
-                </pre>
-              </div>
-            </div>
-          ))}
-        </div> */}
-
         <ul className={`nav nav-tabs nav-fill ${state.searching ? 'd-none' : ''}`} role="tablist" style={{ cursor: 'pointer' }} id="nav-tab">
           {
             Components.all.map((comp, idx) => (
