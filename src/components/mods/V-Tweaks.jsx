@@ -62,6 +62,14 @@ export default () => {
       searching: true,
       searchFeatures: features,
     });
+
+    /* Create a new tooltip if there is one */
+    [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    .forEach((tooltipEl) => {
+      new Tooltip(tooltipEl, {
+        customClass: tooltipEl.className.includes('experimental') ? "experimental-tooltip" : ""
+      });
+    })
   };
 
   const onVersionSet = (evt) => {
@@ -117,7 +125,12 @@ export default () => {
             <div className="row row-cols-1 row-cols-xl-3 g-4">
               {state.searchFeatures.map((feature) => (
                 <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
-                  <div className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}>
+                  <div
+                    className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
+                    data-bs-toggle={feature.experimental && "tooltip"}
+                    data-bs-placement={feature.experimental && "top"}
+                    title={feature.experimental && "This Feature is Experimental!"}
+                  >
                     <img src={feature.img} alt="" className="card-img-top" />
                     <div className="card-body">
                       <h5 className="text-center card-title">
@@ -187,7 +200,6 @@ export default () => {
                       <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
                         <div
                           className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
-
                           data-bs-toggle={feature.experimental && "tooltip"}
                           data-bs-placement={feature.experimental && "top"}
                           title={feature.experimental && "This Feature is Experimental!"}

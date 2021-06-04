@@ -56,8 +56,6 @@
 }
 
 .experimental {
-    height: 250px;
-    width: 400px;
     background: linear-gradient(white,white), repeating-linear-gradient(
         45deg,
         black,
