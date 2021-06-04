@@ -17,78 +17,81 @@ export default () => {
           </div>
         </div>
 
-        <nav className="navbar navbar-expand navbar-light bg-light mb-5">
-          <div className="container-fluid mw-100">
-            <a href="/" className="navbar-brand">
-              Geolosys
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-                <button
-                  className={`nav-link nav-btn ${component === 'about' ? 'active' : ''}`}
-                  type="button"
-                  onClick={() => setComponent('about')}
-                >
-                  About
-                </button>
-                <li className="nav-item dropdown">
-                  <a
-                    className={`nav-link dropdown-toggle ${component !== 'about' ? 'active' : ''}`}
-                    href="/"
-                    id="geolosysDocsDD"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+        <div className="fluid container">
+
+          <nav className="navbar navbar-expand navbar-light bg-light geolosys-navbar mt-2 mb-5">
+            <div className="container-fluid mw-100">
+              <a href="/" className="navbar-brand">
+                Geolosys
+              </a>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
+                  <button
+                    className={`nav-link nav-btn ${component === 'about' ? 'active' : ''}`}
+                    type="button"
+                    onClick={() => setComponent('about')}
                   >
-                    Docs
-                  </a>
-                  <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
-                    <li>
-                      <button
-                        className={`dropdown-item ${component === 'oreGen' ? 'active' : ''}`}
-                        type="button"
-                        onClick={() => setComponent('oreGen')}
-                      >
-                        Ore Generation
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        className={`dropdown-item ${component === 'config' ? 'active' : ''}`}
-                        type="button"
-                        onClick={() => setComponent('config')}
-                      >
-                        JSON Config
-                      </button>
+                    About
+                  </button>
+                  <li className="nav-item dropdown">
+                    <a
+                      className={`nav-link dropdown-toggle ${component !== 'about' ? 'active' : ''}`}
+                      href="/"
+                      id="geolosysDocsDD"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Docs
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
+                      <li>
+                        <button
+                          className={`dropdown-item ${component === 'oreGen' ? 'active' : ''}`}
+                          type="button"
+                          onClick={() => setComponent('oreGen')}
+                        >
+                          Ore Generation
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className={`dropdown-item ${component === 'config' ? 'active' : ''}`}
+                          type="button"
+                          onClick={() => setComponent('config')}
+                        >
+                          JSON Config
+                        </button>
 
-                    </li>
-                    <li>
-                      <button
-                        className={`dropdown-item ${component === 'ct' ? 'active' : ''}`}
-                        type="button"
-                        onClick={() => setComponent('ct')}
-                      >
-                        CraftTweaker API
-                      </button>
+                      </li>
+                      <li>
+                        <button
+                          className={`dropdown-item ${component === 'ct' ? 'active' : ''}`}
+                          type="button"
+                          onClick={() => setComponent('ct')}
+                        >
+                          CraftTweaker API
+                        </button>
 
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
 
         {component === 'about' && (<About />)}
         {component === 'oreGen' && (<OreGen />)}

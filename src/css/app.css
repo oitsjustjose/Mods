@@ -88,11 +88,16 @@ button.nav-link.nav-btn {
 }
 
 .dropdown-item.active {
-    color: #1e2125;
-    background-color: #c2c3c4;
+  color: #1e2125;
+  background-color: #c2c3c4;
 }
 
 .dropdown-item:active {
-    color: #1e2125;
-    background-color: #ebe8e8;
+  color: #1e2125;
+  background-color: #ebe8e8;
+}
+
+.geolosys-navbar {
+  margin: auto;
+  border-radius: 8px;
 }

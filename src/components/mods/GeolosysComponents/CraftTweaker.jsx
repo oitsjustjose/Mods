@@ -348,8 +348,10 @@ export default () => (
       <pre>
         <code>
           mods.geolosys.ores.addOre(
+          {/* eslint-disable-next-line max-len */}
           [&lt;blockstate:minecraft:log:variant=spruce&gt;, &lt;blockstate:minecraft:log:variant=birch&gt;],
           [50, 50],
+          {/* eslint-disable-next-line max-len */}
           [&lt;blockstate:minecraft:log:variant=oak&gt;, &lt;blockstate:minecraft:log2:variant=acacia&gt;],
           [20, 80],
           0, 70, 20, 20, 1.0 as float, [-1, 1],
@@ -366,8 +368,10 @@ export default () => (
       <pre>
         <code>
           mods.geolosys.ores.addOre(
+          {/* eslint-disable-next-line max-len */}
           [&lt;blockstate:minecraft:log:variant=spruce&gt;, &lt;blockstate:minecraft:log:variant=birch&gt;],
           [50, 50],
+          {/* eslint-disable-next-line max-len */}
           [&lt;blockstate:minecraft:log:variant=oak&gt;, &lt;blockstate:minecraft:log2:variant=acacia&gt;],
           [20, 80],
           0, 70, 20, 20, 1.0 as float, [-1, 1],
