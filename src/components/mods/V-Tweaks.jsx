@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import semver from 'semver';
 import Components from '../../vt-components.json';
+import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle.js';
+
 
 const searchFeaturesByName = (query) => {
   const results = Components.all.map(
@@ -32,14 +34,16 @@ export default () => {
     versionFilter: null,
   });
 
-  const [initBtn, setInitBtn] = useState(null);
-
   useEffect(() => {
-    if (initBtn) {
-      initBtn.click();
-    }
-    return () => {};
-  }, [initBtn]);
+    [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      .forEach((tooltipEl) => {
+        new Tooltip(tooltipEl, {
+          customClass: tooltipEl.className.includes('experimental') ? "experimental-tooltip" : ""
+        });
+      })
+
+    return () => { };
+  }, []);
 
   const onSearch = (evt) => {
     const val = evt.target.value;
@@ -66,6 +70,7 @@ export default () => {
       versionFilter: evt.target.value || null,
     });
   };
+
 
   return (
     <CSSTransition classNames="react-router" appear in timeout={300}>
@@ -95,6 +100,7 @@ export default () => {
                   className={`btn ${state.versionFilter === version ? 'btn-primary' : 'btn-secondary'}`}
                   value={version}
                   onClick={onVersionSet}
+                  key={`version_${version}`}
                 >
                   {version}
                 </button>
@@ -108,11 +114,10 @@ export default () => {
             <h2 className="text-center">
               Search Results
             </h2>
-
             <div className="row row-cols-1 row-cols-xl-3 g-4">
               {state.searchFeatures.map((feature) => (
                 <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
-                  <div className="card h-100">
+                  <div className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}>
                     <img src={feature.img} alt="" className="card-img-top" />
                     <div className="card-body">
                       <h5 className="text-center card-title">
@@ -134,63 +139,80 @@ export default () => {
           </div>
         )}
 
-        <ul className={`nav nav-tabs nav-fill ${state.searching ? 'd-none' : ''}`} role="tablist" style={{ cursor: 'pointer' }} id="nav-tab">
-          {
-            Components.all.map((comp, idx) => (
-              <li className="nav-item" role="presentation">
-                <div
-                  className="nav-link"
-                  href={`#${comp.name.toLowerCase().replace(/ /g, '-')}`}
+        <nav>
+          <div
+            className={`nav nav-tabs nav-fill ${state.searching ? 'd-none' : ''}`}
+            id="nav-tab"
+            role="tablist"
+            style={{ cursor: 'pointer' }}
+          >
+            {
+              Components.all.map((comp, idx) => (
+                <button
+                  className={`nav-link ${idx === 0 ? 'active' : ''}`}
                   id={`${comp.name.toLowerCase().replace(/ /g, '-')}-tab`}
+                  data-bs-toggle="tab"
+                  data-bs-target={`#${comp.name.toLowerCase().replace(/ /g, '-')}`}
+                  type="button"
+                  role="tab"
                   aria-controls={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
-                  data-toggle="tab"
-                  ref={(ref) => idx === 0 && setInitBtn(ref)}
+                  aria-selected={idx === 0 ? "true" : "false"}
+                  key={`${idx}_${comp.name}`}
                 >
                   {comp.name}
-                </div>
-              </li>
-            ))
+                </button>
+              ))
             }
-        </ul>
+          </div>
+        </nav>
 
-        <div className={`tab-content ${state.searching ? 'd-none' : ''}`} role="presentation">
+        <div
+          className={`tab-content ${state.searching ? 'd-none' : ''}`}
+          id="nav-tabContent"
+        >
           {
-          Components.all.map((comp) => (
-            <div
-              className="tab-pane fade"
-              id={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
-              aria-labelledby={`${comp.name.toLowerCase().replace(/ /g, '-')}-tab`}
-              role="tabpanel"
-            >
-              <div className="container-fluid my-3">
-                <h2 className="text-center">
-                  {comp.name}
-                </h2>
-                <div className="row row-cols-1 row-cols-xl-3 g-4">
-                  {comp.features.map((feature) => (
-                    <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
-                      <div className="card h-100">
-                        <img src={feature.img} alt="" className="card-img-top" />
-                        <div className="card-body">
-                          <h5 className="text-center card-title">
-                            {feature.name}
-                          </h5>
-                          <p className="card-text mb-1">
-                            {feature.desc}
-                          </p>
-                        </div>
-                        <div className="card-footer">
-                          <code className="text-center">
-                            {feature.versions.join(', ')}
-                          </code>
+            Components.all.map((comp, idx) => (
+              <div
+                className={`tab-pane fade ${idx === 0 ? 'show active' : ''}`}
+                id={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
+                role="tabpanel"
+                aria-labelledby={`${comp.name.toLowerCase().replace(/ /g, '-')}-tab`}
+              >
+                <div className="container-fluid my-3">
+                  <h2 className="text-center">
+                    {comp.name}
+                  </h2>
+                  <div className="row row-cols-1 row-cols-xl-3 g-4">
+                    {comp.features.map((feature) => (
+                      <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
+                        <div
+                          className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
+
+                          data-bs-toggle={feature.experimental && "tooltip"}
+                          data-bs-placement={feature.experimental && "top"}
+                          title={feature.experimental && "This Feature is Experimental!"}
+                        >
+                          <img src={feature.img} alt="" className="card-img-top" />
+                          <div className="card-body">
+                            <h5 className="text-center card-title">
+                              {feature.name}
+                            </h5>
+                            <p className="card-text mb-1">
+                              {feature.desc}
+                            </p>
+                          </div>
+                          <div className="card-footer">
+                            <code className="text-center">
+                              {feature.versions.join(', ')}
+                            </code>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
+            ))
           }
         </div>
       </div>

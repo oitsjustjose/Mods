@@ -12,7 +12,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -26,7 +26,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -40,7 +40,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -53,7 +53,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -75,6 +75,13 @@
             "1.8.9",
             "1.9.4"
           ]
+        },
+        {
+          "name": "Tree Falling",
+          "desc": "Trees actually fall down when breaking their trunk, based off of Tersnip's ChopDown Mod!",
+          "experimental": true,
+          "img": "/img/vtweaks/screenshots/tree_falling.gif",
+          "versions": [ "1.16.5" ]
         }
       ]
     },
@@ -104,7 +111,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -119,7 +126,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -134,7 +141,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -145,7 +152,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -183,7 +190,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -198,7 +205,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -210,7 +217,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -253,8 +260,26 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
+        },
+        {
+          "name": "Smaller Bees",
+          "desc": "This tweak makes it so that bees appear to be smaller (exactly half their size, actually!). Logistically this changes nothing about them - their bounding and hit box is the same for your convenience, but they're sooo cute!",
+          "img": "/img/vtweaks/screenshots/smol_bees.jpg",
+          "versions": [ "1.16.5" ]
+        },
+        {
+          "name": "Low Health Sound",
+          "desc": "This tweak produces a heartbeat-like sound whenever your health is below a configurable threshold. This is purely client-side and can be disabled individually by each user.",
+          "img": "/img/vtweaks/screenshots/low_health_sound.png",
+          "versions": [ "1.16.5" ]
+        },
+        {
+          "name": "No Pet Friendly Fire",
+          "desc": "This tweak prevents pet owners (or all players - this is configurable) from hurting tamed pets so that you can keep your special friend alive and healthy!",
+          "img": "/img/vtweaks/screenshots/npff.jpg",
+          "versions": [ "1.16.5" ]
         }
       ]
     },
@@ -270,7 +295,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -285,7 +310,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -300,7 +325,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -358,7 +383,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -373,7 +398,7 @@
             "1.12.2",
             "1.14.4",
             "1.15.2",
-            "1.16.4"
+            "1.16.5"
           ]
         },
         {
@@ -408,6 +433,12 @@
             "1.8.9",
             "1.9.4"
           ]
+        },
+        {
+          "name": "Cheap Anvil Repairs",
+          "desc": "Ever felt that it was unfair how quickly the XP cost of repairing a tool was? This tweak resets the repair cost every time so that you can reasonably maintain your tools for a long time!",
+          "img": "/img/vtweaks/screenshots/anvil_repair_cost.png",
+          "versions": [ "1.16.5" ]
         }
       ]
     }
