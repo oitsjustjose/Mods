@@ -12,9 +12,9 @@ export default () => (
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarText"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
