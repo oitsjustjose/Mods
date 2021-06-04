@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import semver from 'semver';
+import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle';
 import Components from '../../vt-components.json';
-import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle.js';
-
 
 const searchFeaturesByName = (query) => {
   const results = Components.all.map(
@@ -37,10 +36,11 @@ export default () => {
   useEffect(() => {
     [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       .forEach((tooltipEl) => {
+        /* eslint-disable-next-line */
         new Tooltip(tooltipEl, {
-          customClass: tooltipEl.className.includes('experimental') ? "experimental-tooltip" : ""
+          customClass: tooltipEl.className.includes('experimental') ? 'experimental-tooltip' : '',
         });
-      })
+      });
 
     return () => { };
   }, []);
@@ -65,11 +65,12 @@ export default () => {
 
     /* Create a new tooltip if there is one */
     [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    .forEach((tooltipEl) => {
-      new Tooltip(tooltipEl, {
-        customClass: tooltipEl.className.includes('experimental') ? "experimental-tooltip" : ""
+      .forEach((tooltipEl) => {
+        /* eslint-disable-next-line */
+        new Tooltip(tooltipEl, {
+          customClass: tooltipEl.className.includes('experimental') ? 'experimental-tooltip' : '',
+        });
       });
-    })
   };
 
   const onVersionSet = (evt) => {
@@ -78,7 +79,6 @@ export default () => {
       versionFilter: evt.target.value || null,
     });
   };
-
 
   return (
     <CSSTransition classNames="react-router" appear in timeout={300}>
@@ -127,9 +127,9 @@ export default () => {
                 <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
                   <div
                     className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
-                    data-bs-toggle={feature.experimental && "tooltip"}
-                    data-bs-placement={feature.experimental && "top"}
-                    title={feature.experimental && "This Feature is Experimental!"}
+                    data-bs-toggle={feature.experimental && 'tooltip'}
+                    data-bs-placement={feature.experimental && 'top'}
+                    title={feature.experimental && 'This Feature is Experimental!'}
                   >
                     <img src={feature.img} alt="" className="card-img-top" />
                     <div className="card-body">
@@ -169,8 +169,8 @@ export default () => {
                   type="button"
                   role="tab"
                   aria-controls={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
-                  aria-selected={idx === 0 ? "true" : "false"}
-                  key={`${idx}_${comp.name}`}
+                  aria-selected={idx === 0 ? 'true' : 'false'}
+                  key={comp.name}
                 >
                   {comp.name}
                 </button>
@@ -200,9 +200,9 @@ export default () => {
                       <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
                         <div
                           className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
-                          data-bs-toggle={feature.experimental && "tooltip"}
-                          data-bs-placement={feature.experimental && "top"}
-                          title={feature.experimental && "This Feature is Experimental!"}
+                          data-bs-toggle={feature.experimental && 'tooltip'}
+                          data-bs-placement={feature.experimental && 'top'}
+                          title={feature.experimental && 'This Feature is Experimental!'}
                         >
                           <img src={feature.img} alt="" className="card-img-top" />
                           <div className="card-body">

@@ -56,7 +56,7 @@ export default () => (
       <div className="fluid container">
         <h2>
           <FontAwesomeIcon icon={faYoutube} />
-&nbsp;Reviews
+          &nbsp;Reviews
         </h2>
         <div className="embed-responsive embed-responsive-16by9">
           <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/-X1y9IJnXCk?start=134&end=144" title="YouTube video" allowFullScreen />

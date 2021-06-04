@@ -8,7 +8,7 @@ export default ({
   <li className="nav-item">
     <NavLink exact className="nav-link" activeClassName="nav-link active" to={to}>
       <span>
-        {icon == null ? '' : <FontAwesomeIcon icon={icon} /> }
+        {icon == null ? '' : <FontAwesomeIcon icon={icon} />}
         &nbsp;
         {name}
       </span>

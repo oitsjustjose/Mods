@@ -1,59 +1,62 @@
 #masthead {
-    background: linear-gradient(to bottom left, #00bee0, #00ff62);
-    font-family: 'Minecraftia';
+  background: linear-gradient(to bottom left, #00bee0, #00ff62);
+  font-family: "Minecraftia";
 }
 
 .up.arrow {
-    position: fixed;
-    top: 7rem;
-    left: 175px;
-    user-select: none;
-    -moz-user-select: none;
-    -moz-animation: slideUp 1s ease-in-out 10;
-    -webkit-animation: slideUp 1s ease-in-out 10;
-    animation: slideUp 1s ease-in-out 10;
-    transition: all ease-in-out 500ms;
+  position: fixed;
+  top: 7rem;
+  left: 175px;
+  user-select: none;
+  -moz-user-select: none;
+  -moz-animation: slideUp 1s ease-in-out 10;
+  -webkit-animation: slideUp 1s ease-in-out 10;
+  animation: slideUp 1s ease-in-out 10;
+  transition: all ease-in-out 500ms;
 }
 
 @media screen and (max-width: 1199px) {
-    .up.arrow {
-        left: initial;
-        right: 1.75rem;
-        transition: all ease-in-out 500ms;
-    }
-} 
+  .up.arrow {
+    left: initial;
+    right: 1.75rem;
+    transition: all ease-in-out 500ms;
+  }
+}
 
 @-webkit-keyframes slideUp {
-    0%, 100% {
-        -webkit-transform: translateY(0) rotate(0.001deg);
-    }
-    50% {
-        -webkit-transform: translateY(-3.5rem) rotate(0.001deg);
-    }
+  0%,
+  100% {
+    -webkit-transform: translateY(0) rotate(0.001deg);
+  }
+  50% {
+    -webkit-transform: translateY(-3.5rem) rotate(0.001deg);
+  }
 }
 
 @-moz-keyframes slideUp {
-    0%, 100% {
-        -moz-transform: translateY(0) rotate(0.001deg);
-    }
-    50% {
-        -moz-transform: translateY(-3.5rem) rotate(0.001deg);
-    }
+  0%,
+  100% {
+    -moz-transform: translateY(0) rotate(0.001deg);
+  }
+  50% {
+    -moz-transform: translateY(-3.5rem) rotate(0.001deg);
+  }
 }
 
 @keyframes slideUp {
-    0%, 100% {
-        transform: translateY(0) rotate(0.001deg);
-    }
-    50% {
-        transform: translateY(-3.5rem) rotate(0.001deg);
-    }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0.001deg);
+  }
+  50% {
+    transform: translateY(-3.5rem) rotate(0.001deg);
+  }
 }
 
 #root {
-    height: calc(100% - 3.5rem);
+  height: calc(100% - 3.5rem);
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
 }

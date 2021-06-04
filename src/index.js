@@ -15,17 +15,17 @@ import './css/app.css';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-    <Router>
-        <NavBar />
-        <div style={{ paddingTop: `${3.5}em` }}></div>
-        <Route exact path="/" component={Home} />
-        <Route path="/Geolosys" component={Geolosys} />
-        <Route path="/V-Tweaks" component={VTweaks} />
-        <Route path="/PersistentBits" component={PersistentBits} />
-        <Route path="/NaturalProgressions" component={NaturalProgressions} />
-        <Route path="/TinkersAddons" component={TinkersAddons} />
-        <Route path="/Pulver" component={Pulver} />
-    </Router>
+  <Router>
+    <NavBar />
+    <div style={{ paddingTop: `${3.5}em` }} />
+    <Route exact path="/" component={Home} />
+    <Route path="/Geolosys" component={Geolosys} />
+    <Route path="/V-Tweaks" component={VTweaks} />
+    <Route path="/PersistentBits" component={PersistentBits} />
+    <Route path="/NaturalProgressions" component={NaturalProgressions} />
+    <Route path="/TinkersAddons" component={TinkersAddons} />
+    <Route path="/Pulver" component={Pulver} />
+  </Router>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
