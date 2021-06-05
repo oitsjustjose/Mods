@@ -2,9 +2,9 @@ import React from 'react';
 
 export default () => (
   <div className="pb-5">
-    <div className="fluid container">
+    <div className="fluid container pb-5">
 
-      <h2>
+      <h2 style={{ textDecoration: 'line-through' }}>
         CraftTweaker API
       </h2>
 
@@ -13,7 +13,7 @@ export default () => (
       </h5>
     </div>
 
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <p>
         The CraftTweaker add-on has been created to make adding new deposits to Geolosys
         in an even more robust way. You can follow along the following pages to see how this works.
@@ -37,7 +37,7 @@ export default () => (
       </p>
     </div>
 
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h3>Plain Deposit</h3>
 
       <p>
@@ -110,9 +110,7 @@ export default () => (
       </pre>
     </div>
 
-    <hr />
-
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h3>Biome-Restricted Deposit</h3>
 
       <p>
@@ -200,9 +198,7 @@ export default () => (
       </pre>
     </div>
 
-    <hr />
-
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h3>Multi-Ore Deposit</h3>
 
       <p>
@@ -282,8 +278,6 @@ export default () => (
         </code>
       </pre>
     </div>
-
-    <hr />
 
     <div className="fluid container">
       <h3>Biome-Restricted Multi-Ore Deposit</h3>

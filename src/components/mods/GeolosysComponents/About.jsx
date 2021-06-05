@@ -4,7 +4,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 export default () => (
   <div className="pb-5">
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h2>
         About
       </h2>
@@ -20,10 +20,9 @@ export default () => (
         Geolosys has been written to be as intermod-compatible as possible. You can configure
         nearly every aspect of it to make the best ore excavating experience for your pack!
       </p>
-      <hr />
     </div>
 
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h2>
         Getting Started
       </h2>
@@ -59,19 +58,9 @@ export default () => (
         At this point, with some tunneling and exploring you should hopefully find your first
         pluton!
       </h6>
-      <hr />
     </div>
 
-    <div className="fluid container">
-      <h3>
-        <a rel="noopener noreferrer" href="https://www.curseforge.com/minecraft/mc-mods/geolosys" target="_blank">
-          <FontAwesomeIcon icon={faLink} />
-          &nbsp;Download from CurseForge
-        </a>
-      </h3>
-    </div>
-
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h3>Ore Generation Changed by Geolosys</h3>
 
       <p>
@@ -102,9 +91,7 @@ export default () => (
       </p>
     </div>
 
-    <hr />
-
-    <div className="fluid container">
+    <div className="fluid container pb-5">
       <h3>Pluton Density</h3>
 
       <p>
@@ -117,6 +104,15 @@ export default () => (
         the docs for CraftTweaker and the JSON config where applicable, and is also a part of
         the datapack API built into Minecraft.
       </p>
+    </div>
+
+    <div className="fluid container">
+      <h3>
+        <a rel="noopener noreferrer" href="https://www.curseforge.com/minecraft/mc-mods/geolosys" target="_blank">
+          <FontAwesomeIcon icon={faLink} />
+          &nbsp;Download from CurseForge
+        </a>
+      </h3>
     </div>
 
   </div>
