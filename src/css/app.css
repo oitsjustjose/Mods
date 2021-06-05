@@ -79,14 +79,6 @@
   background-color: red;
 }
 
-button.nav-link.nav-btn {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent;
-  border: none;
-}
-
 .dropdown-item.active {
   color: #1e2125;
   background-color: #c2c3c4;
