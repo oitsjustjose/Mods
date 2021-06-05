@@ -1,6 +1,9 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import OreDeposit from './DatapackTemplates/OreDeposit';
+import OreDepositMulti from './DatapackTemplates/OreDepositMulti';
+import StoneDeposit from './DatapackTemplates/StoneDeposit';
 
 export default () => (
   <div className="pb-5">
@@ -176,32 +179,7 @@ export default () => (
       </p>
 
       <SyntaxHighlighter language="json5" style={nord}>
-        {`
-        {                                     /* Notes / Comments    ↓                                    */
-          "type": "geolosys:ore_deposit",     /* This is always the same for ore plutons                  */
-          "config": {
-            "block": "minecraft:ice",         /* The ore block to generate                                */
-            "sample": "minecraft:ice",        /* The surface sample to generate with the pluton           */
-            "type": "sparse",                 /* Can be SPARSE, DENSE, DIKE, LAYER or TOP_LAYER           */
-            "yMin": 1,                        /* The Minimum Y-level the deposit can gen                  */
-            "yMax": 255,                      /* The Maximum Y-level the deposit can gen                  */
-            "chance": 1,                      /* Out of all chances, cumulatively that the deposits gens  */
-            "size": 24,                       /* The size of pluton - # blocks dependent on type of dep   */
-            "dimensions": {                   /* Control over which dimensions the pluton can gen         */
-              "isBlacklist": true,            /* Is the filter a blacklist or whitelist?                  */
-              "filter": [                     /* The dimensions you wish to filter                        */
-                "the_nether", 
-                "the_end"
-              ]
-            },
-            "biomes" :[                       /* OPTIONAL: which biomes this can/can't gen in             */
-              "minecraft:plains"
-            ],
-            "isWhitelist": true,              /* OPTIONAL (Req'd if biomes key is present)                */
-            "density": 0.75                   /* Float w/ Range 0.0 - 1.0. Density of ores in pluton      */
-          }
-        }
-        `}
+        {OreDeposit}
       </SyntaxHighlighter>
 
       <p>
@@ -215,27 +193,7 @@ export default () => (
         the JSON sample below) alone in the array with a chance of 100.
       </p>
       <SyntaxHighlighter language="json5" style={nord}>
-        {`
-          {
-            .
-            .
-            .
-            "blocks": [{                      /* The block(s) that will generate in the pluton            */
-              "block": "minecraft:dirt",      /* NOTE: only 1 minimum block is required. Chances MUST     */
-              "chance": 90                    /* Add up to equal 100                                      */
-            }, {
-              "block": "minecraft:diamond_ore",
-              "chance": 10
-            }],
-            "samples": [{
-              "block": "minecraft:grass",
-              "chance": 100
-            }],
-            .
-            .
-            .
-          }
-        `}
+        {OreDepositMulti}
       </SyntaxHighlighter>
 
       <h3><code>geolosys:stone_deposit</code></h3>
@@ -246,26 +204,7 @@ export default () => (
       </p>
 
       <SyntaxHighlighter language="json5" style={nord}>
-        {`
-        {                                     /* Notes / Comments    ↓                                    */
-          "type": "geolosys:stone_deposit",   /* This is always the same for all stone plutons            */
-          "config": {
-            "block": "minecraft:ice",         /* The stone block to generate                              */
-            "size": 24,                       /* The size of pluton, in this case max-radius              */
-            "chance": 1,                      /* Out of all chances, cumulatively that the deposits gens  */
-            "yMin": 1,                        /* The Minimum Y-level the deposit can gen                  */
-            "yMax": 255,                      /* The Maximum Y-level the deposit can gen                  */
-            "dimensions": {                   /* Control over which dimensions the pluton can gen         */
-              "isBlacklist": true,            /* Is the filter a blacklist or whitelist?                  */
-              "filter": [                     /* The dimensions you wish to filter                        */
-                "the_nether", 
-                "the_end"
-              ]
-            }
-          }
-        }
-        `}
-
+        {StoneDeposit}
       </SyntaxHighlighter>
 
     </div>
