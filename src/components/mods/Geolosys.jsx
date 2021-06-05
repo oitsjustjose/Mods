@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import About from './GeolosysComponents/About';
+import Datapacks from './GeolosysComponents/Datapacks';
 import Config from './GeolosysComponents/Config';
 import CT from './GeolosysComponents/CraftTweaker';
-import OreGen from './GeolosysComponents/OreGeneration';
+
+const extractComponentName = () => {
+  const url = window.location.href;
+  if (url.includes('#')) {
+    return url.split('#')[1];
+  }
+
+  return 'about';
+};
 
 export default () => {
-  const [component, setComponent] = useState('about');
+  const [component, setComponent] = useState(extractComponentName());
+
+  useEffect(() => {
+    setComponent(extractComponentName());
+    return () => { };
+  }, []);
 
   return (
     <CSSTransition classNames="react-router" appear in timeout={300}>
@@ -37,13 +51,13 @@ export default () => {
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-                  <button
-                    className={`nav-link nav-btn ${component === 'about' ? 'active' : ''}`}
-                    type="button"
+                  <a
+                    className={`nav-link ${component === 'about' ? 'active' : ''}`}
                     onClick={() => setComponent('about')}
+                    href="#about"
                   >
                     About
-                  </button>
+                  </a>
                   <li className="nav-item dropdown">
                     <a
                       className={`nav-link dropdown-toggle ${component !== 'about' ? 'active' : ''}`}
@@ -57,33 +71,31 @@ export default () => {
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
                       <li>
-                        <button
-                          className={`dropdown-item ${component === 'oreGen' ? 'active' : ''}`}
-                          type="button"
-                          onClick={() => setComponent('oreGen')}
+                        <a
+                          className={`dropdown-item ${component === 'datapacks' ? 'active' : ''}`}
+                          onClick={() => setComponent('datapacks')}
+                          href="#datapacks"
                         >
-                          Ore Generation
-                        </button>
+                          Datapacks
+                        </a>
                       </li>
                       <li>
-                        <button
+                        <a
                           className={`dropdown-item ${component === 'config' ? 'active' : ''}`}
-                          type="button"
                           onClick={() => setComponent('config')}
+                          href="#config"
                         >
                           JSON Config
-                        </button>
-
+                        </a>
                       </li>
                       <li>
-                        <button
+                        <a
                           className={`dropdown-item ${component === 'ct' ? 'active' : ''}`}
-                          type="button"
                           onClick={() => setComponent('ct')}
+                          href="#ct"
                         >
                           CraftTweaker API
-                        </button>
-
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -94,7 +106,7 @@ export default () => {
         </div>
 
         {component === 'about' && (<About />)}
-        {component === 'oreGen' && (<OreGen />)}
+        {component === 'datapacks' && (<Datapacks />)}
         {component === 'config' && (<Config />)}
         {component === 'ct' && (<CT />)}
 
