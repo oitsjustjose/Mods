@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import About from './GeolosysComponents/About';
+import Deposits from './GeolosysComponents/Deposits';
 import Datapacks from './GeolosysComponents/Datapacks';
 import Config from './GeolosysComponents/Config';
-import CT from './GeolosysComponents/CraftTweaker';
+import CraftTweaker from './GeolosysComponents/CraftTweaker';
 
 const extractComponentName = () => {
   const url = window.location.href;
@@ -72,6 +73,15 @@ export default () => {
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
                       <li>
                         <a
+                          className={`dropdown-item ${component === 'deposits' ? 'active' : ''}`}
+                          onClick={() => setComponent('deposits')}
+                          href="#deposits"
+                        >
+                          Deposits
+                        </a>
+                      </li>
+                      <li>
+                        <a
                           className={`dropdown-item ${component === 'datapacks' ? 'active' : ''}`}
                           onClick={() => setComponent('datapacks')}
                           href="#datapacks"
@@ -90,9 +100,9 @@ export default () => {
                       </li>
                       <li>
                         <a
-                          className={`dropdown-item ${component === 'ct' ? 'active' : ''}`}
-                          onClick={() => setComponent('ct')}
-                          href="#ct"
+                          className={`dropdown-item ${component === 'crafttweaker' ? 'active' : ''}`}
+                          onClick={() => setComponent('crafttweaker')}
+                          href="#crafttweaker"
                         >
                           CraftTweaker API
                         </a>
@@ -106,9 +116,10 @@ export default () => {
         </div>
 
         {component === 'about' && (<About />)}
+        {component === 'deposits' && (<Deposits />)}
         {component === 'datapacks' && (<Datapacks />)}
         {component === 'config' && (<Config />)}
-        {component === 'ct' && (<CT />)}
+        {component === 'crafttweaker' && (<CraftTweaker />)}
 
       </div>
     </CSSTransition>
