@@ -35,9 +35,9 @@ export default () => {
 
           <nav className="navbar navbar-expand navbar-light bg-light geolosys-navbar mt-2 mb-5">
             <div className="container-fluid mw-100">
-              <a href="/" className="navbar-brand">
-                Geolosys
-              </a>
+              <div className="navbar-brand">
+                Geolosys Submenu
+              </div>
               <button
                 className="navbar-toggler"
                 type="button"

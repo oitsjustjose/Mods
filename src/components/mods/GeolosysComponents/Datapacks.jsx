@@ -27,7 +27,7 @@ export default () => (
         <a
           href="https://minecraft.fandom.com/wiki/Data_Pack"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           this one
         </a>
@@ -43,7 +43,7 @@ export default () => (
         <a
           href="https://www.curseforge.com/minecraft/mc-mods/drp-global-datapack"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           this mod!
         </a>
@@ -146,7 +146,7 @@ export default () => (
         <a
           href="http://oitsjustjo.se/u/iuwYjZ3fJ"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           (which you can find here)
         </a>
