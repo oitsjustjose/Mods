@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import About from './GeolosysComponents/About';
-import Deposits from './GeolosysComponents/Deposits';
+import Plutons from './GeolosysComponents/Plutons';
 import Datapacks from './GeolosysComponents/Datapacks';
 import Config from './GeolosysComponents/Config';
 import CraftTweaker from './GeolosysComponents/CraftTweaker';
@@ -73,11 +73,11 @@ export default () => {
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
                       <li>
                         <a
-                          className={`dropdown-item ${component === 'deposits' ? 'active' : ''}`}
-                          onClick={() => setComponent('deposits')}
-                          href="#deposits"
+                          className={`dropdown-item ${component === 'plutons' ? 'active' : ''}`}
+                          onClick={() => setComponent('plutons')}
+                          href="#plutons"
                         >
-                          Deposits
+                          Plutons
                         </a>
                       </li>
                       <li>
@@ -116,7 +116,7 @@ export default () => {
         </div>
 
         {component === 'about' && (<About />)}
-        {component === 'deposits' && (<Deposits />)}
+        {component === 'plutons' && (<Plutons />)}
         {component === 'datapacks' && (<Datapacks />)}
         {component === 'config' && (<Config />)}
         {component === 'crafttweaker' && (<CraftTweaker />)}
