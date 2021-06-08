@@ -33,6 +33,8 @@ export default () => {
     versionFilter: null,
   });
 
+  const [activeTab, setActiveTab] = useState('Block Tweaks');
+
   useEffect(() => {
     [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       .forEach((tooltipEl) => {
@@ -171,6 +173,7 @@ export default () => {
                   aria-controls={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
                   aria-selected={idx === 0 ? 'true' : 'false'}
                   key={comp.name}
+                  onClick={() => setActiveTab(comp.name)}
                 >
                   {comp.name}
                 </button>
@@ -204,7 +207,11 @@ export default () => {
                           data-bs-placement={feature.experimental && 'top'}
                           title={feature.experimental && 'This Feature is Experimental!'}
                         >
-                          <img src={feature.img} alt="" className="card-img-top" />
+                          <img
+                            src={comp.name === activeTab ? feature.img : '/img/vtweaks/tmp.png'}
+                            alt=""
+                            className="card-img-top"
+                          />
                           <div className="card-body">
                             <h5 className="text-center card-title">
                               {feature.name}
