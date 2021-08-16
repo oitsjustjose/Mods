@@ -147,7 +147,7 @@ export default () => (
         I suggest starting with the original JSON object
         {' '}
         <a
-          href="http://oitsjustjo.se/u/iuwYjZ3fJ"
+          href="https://github.com/oitsjustjose/Geolosys/tree/1.16/src/main/resources/data/geolosys/deposits"
           target="_blank"
           rel="noopener noreferrer"
         >
