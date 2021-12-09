@@ -1,9 +1,8 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import OreDeposit from './DatapackTemplates/OreDeposit';
-import OreDepositMulti from './DatapackTemplates/OreDepositMulti';
-import StoneDeposit from './DatapackTemplates/StoneDeposit';
+import Version6Dp from './Templates/Version6Dp';
+import Version7Dp from './Templates/Version7Dp';
 
 export default () => (
   <div className="pb-5">
@@ -172,41 +171,47 @@ export default () => (
         object should well explain how to accomplish the creation of a new pluton entirely.
       </p>
 
-      <h3><code>geolosys:ore_deposit</code></h3>
+      <div className="accordion" id="version-acc">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="acc-6.x">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Geolosys 6.x (1.16)
+            </button>
+          </h2>
+          <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="acc-6.x" data-bs-parent="#version-acc">
+            <div className="accordion-body">
+              {Object.entries(Version6Dp).map(([title, json5]) => (
+                <div>
+                  <h3><code>{title}</code></h3>
+                  <SyntaxHighlighter language="json5" style={nord}>
+                    {json5}
+                  </SyntaxHighlighter>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-      <p>
-        This would be used for an ore-deposit-like pluton (with a sample block, matchers, etc.).
-      </p>
-
-      <SyntaxHighlighter language="json5" style={nord}>
-        {OreDeposit}
-      </SyntaxHighlighter>
-
-      <p>
-        <b>NOTE:</b>
-        {' '}
-        It is possible to have more than one Ore Block, Sample Block, or both!
-        If you decide to have multiple sample blocks or multiple ore blocks,
-        you must use the syntax below for both samples and blocks, not just one.
-        That is, if you decide you want 2+ ore blocks but only one sample (or vice-versa),
-        you must use the below syntax and just put your one sample/ore (just as is shown in
-        the JSON sample below) alone in the array with a chance of 100.
-      </p>
-      <SyntaxHighlighter language="json5" style={nord}>
-        {OreDepositMulti}
-      </SyntaxHighlighter>
-
-      <h3><code>geolosys:stone_deposit</code></h3>
-
-      <p>
-        This would be used for an stone-like pluton. No sample block,
-        no choice in matchers, just another stone type.
-      </p>
-
-      <SyntaxHighlighter language="json5" style={nord}>
-        {StoneDeposit}
-      </SyntaxHighlighter>
-
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="acc-7.x">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+              Geolosys 7.x (1.18)
+            </button>
+          </h2>
+          <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="acc-7.x" data-bs-parent="#version-acc">
+            <div className="accordion-body">
+              {Object.entries(Version7Dp).map(([title, json5]) => (
+                <div>
+                  <h3><code>{title}</code></h3>
+                  <SyntaxHighlighter language="json5" style={nord}>
+                    {json5}
+                  </SyntaxHighlighter>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 );

@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import About from './GeolosysComponents/About';
-import Plutons from './GeolosysComponents/Plutons';
-import Datapacks from './GeolosysComponents/Datapacks';
-import Config from './GeolosysComponents/Config';
-import CraftTweaker from './GeolosysComponents/CraftTweaker';
-
-const extractComponentName = () => {
-  const url = window.location.href;
-  if (url.includes('#')) {
-    return url.split('#')[1];
-  }
-
-  return 'about';
-};
+import ConfigArchive from './GeolosysComponents/Docs/Archive/Config';
+import CraftTweakerArchive from './GeolosysComponents/Docs/Archive/CraftTweaker';
+import DatapacksArchive from './GeolosysComponents/Docs/Archive/Datapacks';
+import Datapacks from './GeolosysComponents/Docs/Datapacks';
+import PlutonsArchive from './GeolosysComponents/Plutons';
 
 export default () => {
-  const [component, setComponent] = useState(extractComponentName());
-
-  useEffect(() => {
-    setComponent(extractComponentName());
-    return () => { };
-  }, []);
+  const [component, setComponent] = useState(window.location.hash.replace(/#/g, '') || 'about');
 
   return (
     <CSSTransition classNames="react-router" appear in timeout={300}>
@@ -37,7 +24,7 @@ export default () => {
           <nav className="navbar navbar-expand navbar-light bg-light geolosys-navbar mt-2 mb-5">
             <div className="container-fluid mw-100">
               <div className="navbar-brand">
-                Geolosys Submenu
+                Submenu
               </div>
               <button
                 className="navbar-toggler"
@@ -59,9 +46,10 @@ export default () => {
                   >
                     About
                   </a>
+
                   <li className="nav-item dropdown">
                     <a
-                      className={`nav-link dropdown-toggle ${component !== 'about' ? 'active' : ''}`}
+                      className={`nav-link dropdown-toggle ${component !== 'about' && !component.endsWith('-archive') ? 'active' : ''}`}
                       href="/"
                       id="geolosysDocsDD"
                       role="button"
@@ -73,15 +61,6 @@ export default () => {
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
                       <li>
                         <a
-                          className={`dropdown-item ${component === 'plutons' ? 'active' : ''}`}
-                          onClick={() => setComponent('plutons')}
-                          href="#plutons"
-                        >
-                          Plutons
-                        </a>
-                      </li>
-                      <li>
-                        <a
                           className={`dropdown-item ${component === 'datapacks' ? 'active' : ''}`}
                           onClick={() => setComponent('datapacks')}
                           href="#datapacks"
@@ -89,20 +68,53 @@ export default () => {
                           Datapacks
                         </a>
                       </li>
+                    </ul>
+                  </li>
+
+                  <li className="nav-item dropdown">
+                    <a
+                      className={`nav-link dropdown-toggle ${component.endsWith('-archive') ? 'active' : ''}`}
+                      href="/"
+                      id="geolosysDocsDD"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Docs (Archive)
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="geolosysDocsDDArchive">
                       <li>
                         <a
-                          className={`dropdown-item ${component === 'config' ? 'active' : ''}`}
-                          onClick={() => setComponent('config')}
-                          href="#config"
+                          className={`dropdown-item ${component === 'plutons-archive' ? 'active' : ''}`}
+                          onClick={() => setComponent('plutons-archive')}
+                          href="#plutons-archive"
+                        >
+                          Plutons
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'datapacks-archive' ? 'active' : ''}`}
+                          onClick={() => setComponent('datapacks-archive')}
+                          href="#datapacks-archive"
+                        >
+                          Datapacks
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'config-archive' ? 'active' : ''}`}
+                          onClick={() => setComponent('config-archive')}
+                          href="#config-archive"
                         >
                           JSON Config
                         </a>
                       </li>
                       <li>
                         <a
-                          className={`dropdown-item ${component === 'crafttweaker' ? 'active' : ''}`}
-                          onClick={() => setComponent('crafttweaker')}
-                          href="#crafttweaker"
+                          className={`dropdown-item ${component === 'crafttweaker-archive' ? 'active' : ''}`}
+                          onClick={() => setComponent('crafttweaker-archive')}
+                          href="#crafttweaker-archive"
                         >
                           CraftTweaker API
                         </a>
@@ -116,10 +128,13 @@ export default () => {
         </div>
 
         {component === 'about' && (<About />)}
-        {component === 'plutons' && (<Plutons />)}
+
         {component === 'datapacks' && (<Datapacks />)}
-        {component === 'config' && (<Config />)}
-        {component === 'crafttweaker' && (<CraftTweaker />)}
+
+        {component === 'plutons-archive' && (<PlutonsArchive />)}
+        {component === 'datapacks-archive' && (<DatapacksArchive />)}
+        {component === 'config-archive' && (<ConfigArchive />)}
+        {component === 'crafttweaker-archive' && (<CraftTweakerArchive />)}
 
       </div>
     </CSSTransition>
