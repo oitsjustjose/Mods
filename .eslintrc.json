@@ -1,33 +1,26 @@
 {
   "env": {
-      "browser": true,
-      "cypress/globals": true,
-      "es6": true,
-      "jest": true
+    "browser": true,
+    "es6": true,
+    "jest": true
   },
-  "extends": [
-      "plugin:react/recommended",
-      "airbnb"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
   "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": 11,
-      "sourceType": "module"
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
   },
-  "plugins": [
-      "cypress",
-      "react"
-  ],
+  "plugins": ["react"],
   "rules": {
-      "import/no-cycle" : 0,
-      "no-unused-expressions": 0,
-      "react/jsx-props-no-spreading": 0,
-      "react/prop-types": 0
+    "import/no-cycle": 0,
+    "no-unused-expressions": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0
   }
 }
