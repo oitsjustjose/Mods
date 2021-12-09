@@ -96,8 +96,8 @@ export default () => (
 
       <p>
         Over time, needless to say Geolosys has changed. As such, I&apos;m keeping old information
-        on Geolosys in the Docs (Archive) dropdown - this may be a bit jumbled as far as organization
-        goes, but nothing a little
+        on Geolosys in the Docs (Archive) dropdown - this may be a bit jumbled as far as
+        organization goes, but nothing a little
         {' '}
         <kbd>CTRL</kbd>
         {' '}
