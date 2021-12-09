@@ -92,17 +92,20 @@ export default () => (
     </div>
 
     <div className="fluid container pb-5">
-      <h3>Pluton Density</h3>
+      <h3>Archived Info</h3>
 
       <p>
-        New to Version 3.0.0c and above, plutons can now have a density.
-        This density describes how much of the pluton is/are the defined ore block/blocks.
-        For example, a density of 1.0 means the pluton will generate exactly how it used to.
-        A density of 0.75 means that the pluton will take on the same shape,
-        but only 75% of the blocks within that shape will actually be the ore block(s) --
-        the rest will remain whatever block they were initially. This change is reflected in
-        the docs for CraftTweaker and the JSON config where applicable, and is also a part of
-        the datapack API built into Minecraft.
+        Over time, needless to say Geolosys has changed. As such, I&apos;m keeping old information
+        on Geolosys in the Docs (Archive) dropdown - this may be a bit jumbled as far as organization
+        goes, but nothing a little
+        {' '}
+        <kbd>CTRL</kbd>
+        {' '}
+        +
+        {' '}
+        <kbd>F</kbd>
+        {' '}
+        can&apos;t find for you 😄
       </p>
     </div>
 

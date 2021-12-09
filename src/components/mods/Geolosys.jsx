@@ -5,7 +5,7 @@ import ConfigArchive from './GeolosysComponents/Docs/Archive/Config';
 import CraftTweakerArchive from './GeolosysComponents/Docs/Archive/CraftTweaker';
 import DatapacksArchive from './GeolosysComponents/Docs/Archive/Datapacks';
 import Datapacks from './GeolosysComponents/Docs/Datapacks';
-import PlutonsArchive from './GeolosysComponents/Plutons';
+import Plutons from './GeolosysComponents/Docs/Plutons';
 
 export default () => {
   const [component, setComponent] = useState(window.location.hash.replace(/#/g, '') || 'about');
@@ -61,6 +61,15 @@ export default () => {
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDD">
                       <li>
                         <a
+                          className={`dropdown-item ${component === 'plutons' ? 'active' : ''}`}
+                          onClick={() => setComponent('plutons')}
+                          href="#plutons"
+                        >
+                          Plutons
+                        </a>
+                      </li>
+                      <li>
+                        <a
                           className={`dropdown-item ${component === 'datapacks' ? 'active' : ''}`}
                           onClick={() => setComponent('datapacks')}
                           href="#datapacks"
@@ -83,15 +92,6 @@ export default () => {
                       Docs (Archive)
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="geolosysDocsDDArchive">
-                      <li>
-                        <a
-                          className={`dropdown-item ${component === 'plutons-archive' ? 'active' : ''}`}
-                          onClick={() => setComponent('plutons-archive')}
-                          href="#plutons-archive"
-                        >
-                          Plutons
-                        </a>
-                      </li>
                       <li>
                         <a
                           className={`dropdown-item ${component === 'datapacks-archive' ? 'active' : ''}`}
@@ -131,7 +131,7 @@ export default () => {
 
         {component === 'datapacks' && (<Datapacks />)}
 
-        {component === 'plutons-archive' && (<PlutonsArchive />)}
+        {component === 'plutons' && (<Plutons />)}
         {component === 'datapacks-archive' && (<DatapacksArchive />)}
         {component === 'config-archive' && (<ConfigArchive />)}
         {component === 'crafttweaker-archive' && (<CraftTweakerArchive />)}
