@@ -11,7 +11,7 @@ export default () => (
             ^
           </h1>
           <h1>
-            oitsjustjose's Mod Wiki
+            oitsjustjose&apos;s Mod Wiki
           </h1>
           <h5>
             Brief guides for each and every mod to get you started!

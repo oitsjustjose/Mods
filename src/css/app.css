@@ -18,28 +18,28 @@
 }
 
 .geolosys.masthead {
-  background: url("/img/geolosys/cover.jpg");
+  background: url("/src/assets/img/geolosys/cover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .vtweaks.masthead {
-  background: url("/img/vtweaks/cover.png");
+  background: url("/src/assets/img/vtweaks/cover.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pb.masthead {
-  background: url("/img/persistentbits/cover.png");
+  background: url("/src/assets/img/persistentbits/cover.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .np.masthead {
-  background: url("/img/natpro/cover.png");
+  background: url("/src/assets/img/natpro/cover.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

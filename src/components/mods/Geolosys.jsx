@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import About from './GeolosysComponents/About';
@@ -83,7 +84,7 @@ export default () => {
                   <li className="nav-item dropdown">
                     <a
                       className={`nav-link dropdown-toggle ${component.endsWith('-archive') ? 'active' : ''}`}
-                      href="/"
+                      href="#"
                       id="geolosysDocsDD"
                       role="button"
                       data-bs-toggle="dropdown"

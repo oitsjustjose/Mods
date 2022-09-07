@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Version6Dp from './Templates/Version6Dp';
 import Version7Dp from './Templates/Version7Dp';
+import Version7Dp119 from './Templates/Version7Dp1.19';
 
 export default () => (
   <div className="pb-5">
@@ -201,6 +202,26 @@ export default () => (
           <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="acc-7.x" data-bs-parent="#version-acc">
             <div className="accordion-body">
               {Object.entries(Version7Dp).map(([title, json5]) => (
+                <div>
+                  <h3><code>{title}</code></h3>
+                  <SyntaxHighlighter language="json5" style={nord}>
+                    {json5}
+                  </SyntaxHighlighter>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="acc-7.x-1.19">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
+              Geolosys 7.x (1.19)
+            </button>
+          </h2>
+          <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="acc-7.x-1.19" data-bs-parent="#version-acc">
+            <div className="accordion-body">
+              {Object.entries(Version7Dp119).map(([title, json5]) => (
                 <div>
                   <h3><code>{title}</code></h3>
                   <SyntaxHighlighter language="json5" style={nord}>
