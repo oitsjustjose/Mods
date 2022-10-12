@@ -14,7 +14,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -30,7 +31,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -46,7 +48,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -61,7 +64,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -92,7 +96,8 @@
           "versions": [
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         }
       ]
@@ -125,7 +130,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -142,7 +148,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -159,7 +166,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -172,7 +180,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -200,7 +209,7 @@
       "features": [
         {
           "name": "Challenger Mobs",
-          "desc": " Challenger Mobs have various classes, configurable loot tables, names, and rarity. They are lots harder than your average mob. All challenger mobs are invulnerable to fire, and have an optional particle effect surrounding them! Any hostile mob from any mood can spawn as a Challenger Mob except for those in the blacklist.",
+          "desc": "Challenger Mobs are an insanely customizable data-driven approach to boss-like mobs. Using a datapack (see the [defaults](https://github.com/oitsjustjose/V-Tweaks/tree/1.19.x/src/main/resources/data/vtweaks/challenger_mobs) for an example), you can define what gear, particle color, name, stats, effects, mobs and loot each type of challenger tier can take on. As you look through the defaults ([this one is a good example of a complex challenger](https://github.com/oitsjustjose/V-Tweaks/blob/1.19.x/src/main/resources/data/vtweaks/challenger_mobs/mighty.json)) you'll see how much you can do with this feature as a pack maker!",
           "img": "/img/vtweaks/screenshots/challengers.png",
           "versions": [
             "1.7.10",
@@ -212,7 +221,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -229,7 +239,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -243,7 +254,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -288,7 +300,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -298,7 +311,8 @@
           "versions": [
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -308,7 +322,8 @@
           "versions": [
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -318,7 +333,8 @@
           "versions": [
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         }
       ]
@@ -337,7 +353,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -354,7 +371,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -371,7 +389,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -418,6 +437,15 @@
       "name": "Miscellaneous",
       "features": [
         {
+          "name": "[Datapack] Anvil Recipe Type",
+          "desc": "Create custom anvil recipes using a datapack! You can see the built-in datapack [here](https://github.com/oitsjustjose/V-Tweaks/tree/1.19.x/src/main/resources/data/vtweaks/recipes/anvil) and use them as examples, but not documented is the ability to use the *optional* attribute `cpFromLeft` and `cpFromRight`. If excluded they default to `false`, but when included and set to `true` the anvil recipe will copy any NBT from the left/right/both input items. Any NBT overlap will prefer the output's hard-coded NBT. Anvil Recipes **must** have a cost > 0 due to a Forge bug.",
+          "img": "/img/vtweaks/screenshots/datapack_anvil_recipes.png",
+          "versions": [
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
           "name": "Thunder Storm Quelling",
           "desc": "Lightning from Thunder Storms in chunk-loaded chunks can cause some strange ghost light blocks. V-Tweaks remedies this by disabling thunder storms altogether, in a clean fashion. Might be incompatible with mods which depend on thunderstorms though!",
           "img": "/img/vtweaks/screenshots/thunder_storms.png",
@@ -431,7 +459,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -448,7 +477,8 @@
             "1.15.2",
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         },
         {
@@ -491,7 +521,8 @@
           "versions": [
             "1.16.5",
             "1.17.0",
-            "1.18.0"
+            "1.18.0",
+            "1.19.0"
           ]
         }
       ]

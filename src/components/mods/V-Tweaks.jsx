@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
 import semver from 'semver';
 import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle';
@@ -217,7 +218,7 @@ export default () => {
                               {feature.name}
                             </h5>
                             <p className="card-text mb-1">
-                              {feature.desc}
+                              <ReactMarkdown>{feature.desc}</ReactMarkdown>
                             </p>
                           </div>
                           <div className="card-footer">

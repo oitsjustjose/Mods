@@ -2,5 +2,9 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
   }
 }
