@@ -1,0 +1,529 @@
+{
+  "all": [
+    {
+      "name": "Block Tweaks",
+      "features": [
+        {
+          "name": "Easy Crop Harvesting",
+          "desc": "Right-Clicking on crops will do all the work of harvesting for you!! Right clicking (empty hand or not!) will earn you not only the original drop of the crop, but even some of the bonus seeds that you'd normally get (minus one, of course, to account for what's been re-planted for you). Works with most plantables, assuming they follow similar code to Vanilla.",
+          "img": "/img/vtweaks/screenshots/crop_harvesting.gif",
+          "versions": [
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Extra Bonemealing",
+          "desc": " Ever been annoyed by things you can't bonemeal? With V-Tweaks, you can now bonemeal Cactus and Sugar Cane (up to their natural 3-block-tall limit), and use blaze-powder on Netherwart!",
+          "img": "/img/vtweaks/screenshots/bonemeal.png",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Reusable Cakes",
+          "desc": " Breaking a completely un-eaten cake will drop itself. Finally you can have your cake and eat it too!",
+          "img": "/img/vtweaks/screenshots/cake_drop.png",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Improved Tool Efficiencies",
+          "desc": " Pretty self-explanatory. Things that should break easier with certain tools do (skulls, levers, glass, pistons with picks, hay with shears and axes, etc.).",
+          "img": "/img/vtweaks/screenshots/tool_efficiency.png",
+          "versions": [
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0"
+          ]
+        },
+        {
+          "name": "Torch Helper",
+          "desc": "Having your hands full is a pain - so is switching around your hotbar. The Torch Helper tweak allows you to right-click with any generic tool item and place a torch. Special Conditions: Empty Offhand, and mod compatibility works if the item you want placed as a torch has the word torch in its localized name (i.e. what \"torch\" is in your language).",
+          "img": "/img/vtweaks/screenshots/torch_helper.gif",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4"
+          ]
+        },
+        {
+          "name": "Glitching Item Fix",
+          "desc": "Nobody likes glitching items. When enabled, item frames, their stored items, paintings and records from jukeboxes all go straight to your feet instead of falling out near the original location.",
+          "img": "/img/vtweaks/screenshots/glitch_fix.gif",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4"
+          ]
+        },
+        {
+          "name": "Tree Falling",
+          "desc": "Trees actually fall down when breaking their trunk, based off of Tersnip's ChopDown Mod!",
+          "experimental": true,
+          "img": "/img/vtweaks/screenshots/tree_falling.gif",
+          "versions": [
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Item Tweaks",
+      "features": [
+        {
+          "name": "Extra Burnables",
+          "desc": "Makes more materials usable as a furnace fuel",
+          "img": "/img/vtweaks/screenshots/extra_fuels.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Organic Saplings",
+          "desc": " Instead of despawning, you can have saplings attempt to plant themselves before they despawn, allowing for easier farming and a more natural feeling.",
+          "img": "/img/vtweaks/screenshots/saplings.gif",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Egg Hatching",
+          "desc": "Adds a [configurable] chance for eggs to hatch into baby chickens",
+          "img": "/img/vtweaks/screenshots/hatching.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Adjustable Despawn Timers",
+          "desc": " Enabling this feature lets you adjust how long items take to despawn. Setting it to -1 means they never will!!",
+          "img": "/img/vtweaks/screenshots/despawn.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Concrete Tweaks",
+          "desc": "Allows you to solidify concrete powder when thrown or dispensed into water",
+          "img": "/img/vtweaks/screenshots/concrete_tweaks.gif",
+          "versions": [
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Leaf Blower",
+          "desc": "Just another step towards making cutting down trees easier!  Axes can break a 7x7x7 of leaves in an area! Don't worry, it only damages the axe once instead of for every leaf block broken.",
+          "img": "/img/vtweaks/screenshots/leaf_blower.gif",
+          "versions": [
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Sleeping Bags",
+          "desc": "Without adding any new items, I still wanted to add sleeping bags for portable sleeping. So how's it work? Take a bed and rename it in an anvil to \"Sleeping Bag\". Capitalization doesn't matter - spelling, however, does. Once you do, if you right-click it and it'll be day before you know it! If you're on a multiplayer server, 50% of players (including yourself) must be asleep for it to work. This will not count other players trying to use sleeping bags.",
+          "img": "/img/vtweaks/screenshots/sleeping_bag.gif",
+          "versions": [
+            "1.9.4",
+            "1.10.2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mob Tweaks",
+      "features": [
+        {
+          "name": "Challenger Mobs",
+          "desc": "Challenger Mobs are an insanely customizable data-driven approach to boss-like mobs. Using a datapack (see the [defaults](https://github.com/oitsjustjose/V-Tweaks/tree/1.19.x/src/main/resources/data/vtweaks/challenger_mobs) for an example), you can define what gear, particle color, name, stats, effects, mobs and loot each type of challenger tier can take on. As you look through the defaults ([this one is a good example of a complex challenger](https://github.com/oitsjustjose/V-Tweaks/blob/1.19.x/src/main/resources/data/vtweaks/challenger_mobs/mighty.json)) you'll see how much you can do with this feature as a pack maker!",
+          "img": "/img/vtweaks/screenshots/challengers.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Feather Plucking",
+          "desc": "Pluck feathers off of chickens with shears! There is a cool-down of approximately 5 minutes, but it doesn't hurt the chicken even though it looks like it does!",
+          "img": "/img/vtweaks/screenshots/plucking.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Pet Armory",
+          "desc": "You can now equip any Tameable entity (from other mods or minecraft) with armor and tools! Throw any armor or tool at them, and in just a matter of time they'll pick it up and use it! These won't render, but with some testing you'll be able to see that it's working!",
+          "img": "/img/vtweaks/screenshots/pet_armory.png",
+          "versions": [
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Mob Drop Buffs",
+          "desc": " Chickens, Cows, Skeletons, Squids and Endermen have individually configurable increases in their resourceful drops.",
+          "img": "/img/vtweaks/screenshots/dropbuffs.png",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2"
+          ]
+        },
+        {
+          "name": "Mob Purger",
+          "desc": " V-Tweaks offers an option to prevent either (or both) from spawning. Disabling Pig-Zombies will also reduce Ghast Spawns (because otherwise your Nether would flood with them).",
+          "img": "/img/vtweaks/screenshots/mob_disabler.png",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2"
+          ]
+        },
+        {
+          "name": "Wither Restriction",
+          "desc": "Looking to force a challenge or prevent widespread overworld griefing? You can use V-Tweaks to prevent the Wither from being summoned in the Overworld with one simple config option (defaulted to false).",
+          "img": "/img/vtweaks/screenshots/wither_restriction.png",
+          "versions": [
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Peaceful Surface",
+          "desc": "Don't want to deal with mobs on your first night? Hate having creepers come destroy the house that you're not done building yet? Peaceful Surface prevents mobs spawning above sea level on most nights, preventing you from having to deal with all the mobs. Only on new moons will mobs spawn on the surface, but you can otherwise find them in caves like usual!",
+          "img": "/img/vtweaks/screenshots/peaceful_surface.png",
+          "versions": [
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Smaller Bees",
+          "desc": "This tweak makes it so that bees appear to be smaller (exactly half their size, actually!). Logistically this changes nothing about them - their bounding and hit box is the same for your convenience, but they're sooo cute!",
+          "img": "/img/vtweaks/screenshots/smol_bees.jpg",
+          "versions": [
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Low Health Sound",
+          "desc": "This tweak produces a heartbeat-like sound whenever your health is below a configurable threshold. This is purely client-side and can be disabled individually by each user.",
+          "img": "/img/vtweaks/screenshots/low_health_sound.png",
+          "versions": [
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "No Pet Friendly Fire",
+          "desc": "This tweak prevents pet owners (or all players - this is configurable) from hurting tamed pets so that you can keep your special friend alive and healthy!",
+          "img": "/img/vtweaks/screenshots/pet_ff.gif",
+          "versions": [
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enchantments",
+      "features": [
+        {
+          "name": "Imperishable",
+          "desc": " Imperishable is an enchantment that can be obtained only in Nether Fortress Chests (in 1.12 and below). In 1.14+ this book is obtained via anvil recipe, combining two Unbreaking III books. This enchantment can be applied to any tool, weapon or armor. It prevents said equipment from being used (and therefore damaged) when said equipment only has 1 durability left.",
+          "img": "/img/vtweaks/screenshots/imperishable.gif",
+          "versions": [
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Lumbering",
+          "desc": " Lumbering enchanted books are crafted in an anvil with a golden axe and a Book & Quill. This enchantment can be applied to any generic Axe, and allows you to cut down whole trees. This \"treecapitator\" effect only takes place while sneaking, and cuts down the tree. It will also destroy any nearby log blocks... so be careful! This is crafted by combining a Book and Quill with a Golden Axe in an anvil. XP costs for the recipes are configurable.",
+          "img": "/img/vtweaks/screenshots/lumbering.gif",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Better Feather Falling",
+          "desc": "If you have a pair of boots with Feather Falling IV on them, all fall damage is negated. The damage you would have taken (literally - the amount of half-hearts you would have taken) is then applied to directly to your boots instead.",
+          "img": "/img/vtweaks/screenshots/featherfalling.gif",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Hypermending",
+          "desc": "Hypermending enchanted books are crafted in an anvil with a Nether Star and a Book & Quill. Similar to normal Vanilla Mending, Hypermending repairs your tool - however, it does so rapidly (constantly in fact) and at no recurring cost - hence the upfront cost. Can be applied to any generic tool or armor. XP costs for the recipes are configurable.",
+          "img": "/img/vtweaks/screenshots/hypermending.gif",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Auto Smelt",
+          "desc": " Auto-Smelt enchanted books are crafted in an anvil with a Lava Bucket and a Book & Quill. The smelting effect stacks with Fortune, and can be applied to any generic tool (from any mod). XP drops are calculated, and if a block for some reason does not apply the Fortune quantities to it, there is an override list in the config as well! XP costs for the recipes are configurable.",
+          "img": "/img/vtweaks/screenshots/auto-smelf.gif",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Step Boost",
+          "desc": "Step boost enchanted books are crafted in an anvil with 16 stairs (of any mods') and a Book & Quill, and can also be acquired through random enchanting. Allows the player to walk up one-block tall slopes without having to jump (can be walking in any direction). XP costs for the recipes are configurable.",
+          "img": "/img/vtweaks/screenshots/stepboost.gif",
+          "versions": [
+            "1.8.9",
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Multifaceted",
+          "desc": "Multifaceted enchanted books are crafted by throwing an undamaged Diamond Axe, Diamond Shovel, and Book & Quill in world. You \"fuse\" them together with the force from an in-world explosion (I suggest TNT). This enchantment can only be applied to Pickaxes, and allows the pick to efficiently harvest any block!",
+          "img": "/img/vtweaks/screenshots/",
+          "versions": [
+            "1.10.2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "features": [
+        {
+          "name": "[Datapack] Anvil Recipe Type",
+          "desc": "Create custom anvil recipes using a datapack! You can see the built-in datapack [here](https://github.com/oitsjustjose/V-Tweaks/tree/1.19.x/src/main/resources/data/vtweaks/recipes/anvil) and use them as examples, but not documented is the ability to use the *optional* attribute `cpFromLeft` and `cpFromRight`. If excluded they default to `false`, but when included and set to `true` the anvil recipe will copy any NBT from the left/right/both input items. Any NBT overlap will prefer the output's hard-coded NBT. Anvil Recipes **must** have a cost > 0 due to a Forge bug.",
+          "img": "/img/vtweaks/screenshots/datapack_anvil_recipes.png",
+          "versions": [
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Thunder Storm Quelling",
+          "desc": "Lightning from Thunder Storms in chunk-loaded chunks can cause some strange ghost light blocks. V-Tweaks remedies this by disabling thunder storms altogether, in a clean fashion. Might be incompatible with mods which depend on thunderstorms though!",
+          "img": "/img/vtweaks/screenshots/thunder_storms.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Extra Tooltips",
+          "desc": "First is a lightweight alternative to features like AppleCore's hunger overlay: a useful tooltip telling you hunger and saturation. Saturation is on a RGB scale from Red to Cyan, Red being worst and Cyan being best. Hunger is shown by Red and faded Red boxes; faded red being half of a hunger haunch, and solid red being a full haunch. Second is a simple little durability tooltip, telling you how many uses the tool has left! Both tooltips are configurable to be on by default, only while sneaking, or off (settings are mutually exclusive).",
+          "img": "/img/vtweaks/screenshots/food_tooltips.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2",
+            "1.14.4",
+            "1.15.2",
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        },
+        {
+          "name": "Horse Armor Crafting",
+          "desc": "Craft horse armor using two pairs of undamaged, matching leggings and some experience! Experience cost is not configurable.",
+          "img": "/img/vtweaks/screenshots/horse_armor.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2",
+            "1.12.2"
+          ]
+        },
+        {
+          "name": "Increased Stack Sizes",
+          "desc": "Things with unnaturally small stack sizes have been increased to 64!",
+          "img": "/img/vtweaks/screenshots/stack_tweaks.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4",
+            "1.10.2"
+          ]
+        },
+        {
+          "name": "Early-Game Changes",
+          "desc": "If you're still looking for a feature like this, check out Natural Progression! Looking to spice up your game? Then this is an easy, safe bet to do it! This (disabled by default) feature makes stone drop gravel (or flint), and makes flint the required item for crafting stone tools. Cobblestone can be crafted with a 2x2 of Gravel - allowing the rest of your game to progress like normal.",
+          "img": "/img/vtweaks/screenshots/base_game.png",
+          "versions": [
+            "1.7.10",
+            "1.8.9",
+            "1.9.4"
+          ]
+        },
+        {
+          "name": "Cheap Anvil Repairs",
+          "desc": "Ever felt that it was unfair how quickly the XP cost of repairing a tool was? This tweak resets the repair cost every time so that you can reasonably maintain your tools for a long time!",
+          "img": "/img/vtweaks/screenshots/anvil_repair_cost.png",
+          "versions": [
+            "1.16.5",
+            "1.17.0",
+            "1.18.0",
+            "1.19.0"
+          ]
+        }
+      ]
+    }
+  ]
+}

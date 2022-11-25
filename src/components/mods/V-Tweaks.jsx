@@ -1,40 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
-import semver from 'semver';
 import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle';
+import FeatureList from './VTweaksComponents/FeatureList';
+import ArchivedComponents from '../../vt-components.old.json';
 import Components from '../../vt-components.json';
-
-const searchFeaturesByName = (query) => {
-  const results = Components.all.map(
-    (component) => component.features.filter(
-      (feature) => feature.name.toLowerCase().includes(query.toLowerCase()),
-    ),
-  ).flat();
-
-  return results.length ? results : [];
-};
-
-const getAllUniqueVersions = () => {
-  const versions = new Set();
-
-  Components.all.forEach((component) => {
-    component.features.forEach((feature) => {
-      feature.versions.map((x) => versions.add(x));
-    });
-  });
-
-  return semver.sort(Array.from(versions));
-};
+import ChallengerDatapacks from './VTweaksComponents/Datapack/ChallengerMobs';
+import CullingDatapacks from './VTweaksComponents/Datapack/EntityCulling';
+import AnvilRecipes from './VTweaksComponents/Datapack/AnvilRecipes';
+import FluidTrans from './VTweaksComponents/Datapack/FluidTrans';
 
 export default () => {
-  const [state, setState] = useState({
-    searching: false,
-    searchFeatures: null,
-    versionFilter: null,
-  });
-
-  const [activeTab, setActiveTab] = useState('Block Tweaks');
+  const [component, setComponent] = useState(window.location.hash.replace(/#/g, '') || 'features');
 
   useEffect(() => {
     [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -48,41 +24,6 @@ export default () => {
     return () => { };
   }, []);
 
-  const onSearch = (evt) => {
-    const val = evt.target.value;
-    if (!val) {
-      setState({
-        ...state,
-        searching: false,
-        searchFeatures: null,
-      });
-      return;
-    }
-
-    const features = searchFeaturesByName(val);
-    setState({
-      ...state,
-      searching: true,
-      searchFeatures: features,
-    });
-
-    /* Create a new tooltip if there is one */
-    [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      .forEach((tooltipEl) => {
-        /* eslint-disable-next-line */
-        new Tooltip(tooltipEl, {
-          customClass: tooltipEl.className.includes('experimental') ? 'experimental-tooltip' : '',
-        });
-      });
-  };
-
-  const onVersionSet = (evt) => {
-    setState({
-      ...state,
-      versionFilter: evt.target.value || null,
-    });
-  };
-
   return (
     <CSSTransition classNames="react-router" appear in timeout={300}>
       <div>
@@ -92,148 +33,109 @@ export default () => {
           </div>
         </div>
 
-        <div className="container-fluid my-3" style={{ maxWidth: `${767}px`, width: `${100}vw` }}>
-          <input
-            className="form-control"
-            type="text"
-            placeholder="Search..."
-            aria-label="Search for Features"
-            onChange={onSearch}
-          />
-        </div>
+        <div className="fluid container">
 
-        <div className="text-center my-3">
-          <div className="btn-group flex-wrap mx-2" role="group" aria-label="Basic example">
-            {
-              getAllUniqueVersions().map((version) => (
-                <button
-                  type="button"
-                  className={`btn ${state.versionFilter === version ? 'btn-primary' : 'btn-secondary'}`}
-                  value={version}
-                  onClick={onVersionSet}
-                  key={`version_${version}`}
-                >
-                  {version}
-                </button>
-              ))
-            }
-          </div>
-        </div>
-
-        {state.searching && (
-          <div className="container-fluid my-3">
-            <h2 className="text-center">
-              Search Results
-            </h2>
-            <div className="row row-cols-1 row-cols-xl-3 g-4">
-              {state.searchFeatures.map((feature) => (
-                <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
-                  <div
-                    className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
-                    data-bs-toggle={feature.experimental && 'tooltip'}
-                    data-bs-placement={feature.experimental && 'top'}
-                    title={feature.experimental && 'This Feature is Experimental!'}
-                  >
-                    <img src={feature.img} alt="" className="card-img-top" />
-                    <div className="card-body">
-                      <h5 className="text-center card-title">
-                        {feature.name}
-                      </h5>
-                      <p className="card-text mb-1">
-                        {feature.desc}
-                      </p>
-                    </div>
-                    <div className="card-footer">
-                      <code className="text-center">
-                        {feature.versions.join(', ')}
-                      </code>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <nav>
-          <div
-            className={`nav nav-tabs nav-fill ${state.searching ? 'd-none' : ''}`}
-            id="nav-tab"
-            role="tablist"
-            style={{ cursor: 'pointer' }}
-          >
-            {
-              Components.all.map((comp, idx) => (
-                <button
-                  className={`nav-link ${idx === 0 ? 'active' : ''}`}
-                  id={`${comp.name.toLowerCase().replace(/ /g, '-')}-tab`}
-                  data-bs-toggle="tab"
-                  data-bs-target={`#${comp.name.toLowerCase().replace(/ /g, '-')}`}
-                  type="button"
-                  role="tab"
-                  aria-controls={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
-                  aria-selected={idx === 0 ? 'true' : 'false'}
-                  key={comp.name}
-                  onClick={() => setActiveTab(comp.name)}
-                >
-                  {comp.name}
-                </button>
-              ))
-            }
-          </div>
-        </nav>
-
-        <div
-          className={`tab-content ${state.searching ? 'd-none' : ''}`}
-          id="nav-tabContent"
-        >
-          {
-            Components.all.map((comp, idx) => (
-              <div
-                className={`tab-pane fade ${idx === 0 ? 'show active' : ''}`}
-                id={`${comp.name.toLowerCase().replace(/ /g, '-')}`}
-                role="tabpanel"
-                aria-labelledby={`${comp.name.toLowerCase().replace(/ /g, '-')}-tab`}
-              >
-                <div className="container-fluid my-3">
-                  <h2 className="text-center">
-                    {comp.name}
-                  </h2>
-                  <div className="row row-cols-1 row-cols-xl-3 g-4">
-                    {comp.features.map((feature) => (
-                      <div className={`col ${(state.versionFilter == null || feature.versions.includes(state.versionFilter)) ? '' : 'd-none'}`}>
-                        <div
-                          className={`card h-100 ${feature.experimental ? 'experimental' : ''}`}
-                          data-bs-toggle={feature.experimental && 'tooltip'}
-                          data-bs-placement={feature.experimental && 'top'}
-                          title={feature.experimental && 'This Feature is Experimental!'}
-                        >
-                          <img
-                            src={comp.name === activeTab ? feature.img : '/img/vtweaks/tmp.png'}
-                            alt=""
-                            className="card-img-top"
-                          />
-                          <div className="card-body">
-                            <h5 className="text-center card-title">
-                              {feature.name}
-                            </h5>
-                            <p className="card-text mb-1">
-                              <ReactMarkdown>{feature.desc}</ReactMarkdown>
-                            </p>
-                          </div>
-                          <div className="card-footer">
-                            <code className="text-center">
-                              {feature.versions.join(', ')}
-                            </code>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          <nav className="navbar navbar-expand navbar-light bg-light geolosys-navbar mt-2 mb-5">
+            <div className="container-fluid mw-100">
+              <div className="navbar-brand">
+                Submenu
               </div>
-            ))
-          }
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
+                  <a
+                    className={`nav-link ${component === 'features' ? 'active' : ''}`}
+                    onClick={() => setComponent('features')}
+                    href="#features"
+                  >
+                    Features
+                  </a>
+
+                  <a
+                    className={`nav-link ${component === 'features-archived' ? 'active' : ''}`}
+                    onClick={() => setComponent('features-archived')}
+                    href="#archived-features"
+                  >
+                    Old/Unsupported Versions
+                  </a>
+
+                  <li className="nav-item dropdown">
+                    <a
+                      className={`nav-link dropdown-toggle ${component !== 'features' && !component.endsWith('-archived') ? 'active' : ''}`}
+                      href="/"
+                      id="docs"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Datapacks
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="datapacksDD">
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'challengers' ? 'active' : ''}`}
+                          onClick={() => setComponent('challengers')}
+                          href="#challengers"
+                        >
+                          Challenger Mobs
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'entity-culling' ? 'active' : ''}`}
+                          onClick={() => setComponent('entity-culling')}
+                          href="#entity-culling"
+                        >
+                          Entity Culling
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'anvil-recipes' ? 'active' : ''}`}
+                          onClick={() => setComponent('anvil-recipes')}
+                          href="#anvil-recipes"
+                        >
+                          Anvil Recipes
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className={`dropdown-item ${component === 'fluid-recipes' ? 'active' : ''}`}
+                          onClick={() => setComponent('fluid-recipes')}
+                          href="#fluid-recipes"
+                        >
+                          Fluid Transformation Recipes
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div className="fluid container">
+          <div className="container-fluid">
+
+            {component === 'features' && (<FeatureList components={Components} />)}
+            {component === 'features-archived' && (<FeatureList components={ArchivedComponents} />)}
+            {/* Data packs */}
+            {component === 'challengers' && (<ChallengerDatapacks />)}
+            {component === 'entity-culling' && (<CullingDatapacks />)}
+            {component === 'anvil-recipes' && (<AnvilRecipes />)}
+            {component === 'fluid-recipes' && (<FluidTrans />)}
+          </div>
         </div>
       </div>
     </CSSTransition>
