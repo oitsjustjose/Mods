@@ -71,7 +71,7 @@
       "features": [
         {
           "name": "Challenger Mobs",
-          "desc": "Challenger Mobs are an insanely customizable data-driven approach to boss-like mobs. See its dedicated Datapack Page using the submenu above to learn more about customzing this feature!",
+          "desc": "Challenger Mobs are an insanely customizable data-driven approach to boss-like mobs. See its dedicated Datapack Page using the submenu above to learn more about customizing this feature!",
           "img": "/img/vtweaks/screenshots/challengers.png",
           "versions": [
             "1.19.2"
@@ -87,7 +87,7 @@
         },
         {
           "name": "Entity Culling",
-          "desc": "V-Tweaks offers a very powerful data-driven tool for allow you to disable specific mobs (or `entity_type` tag) from spawning in a particular dimension, biome or biome tag! See its dedicated Datapack Page using the submenu above to learn more about customzing this feature!",
+          "desc": "V-Tweaks offers a very powerful data-driven tool for allow you to disable specific mobs (or `entity_type` tag) from spawning in a particular dimension, biome or biome tag! See its dedicated Datapack Page using the submenu above to learn more about customizing this feature!",
           "img": "/img/vtweaks/screenshots/mob_disabler.png",
           "versions": [
             "1.19.2"
@@ -153,7 +153,7 @@
       "features": [
         {
           "name": "Anvil Recipes",
-          "desc": "Create custom anvil recipes using a datapack! See its dedicated Datapack Page using the submenu above to learn more about customzing this feature!",
+          "desc": "Create custom anvil recipes using a datapack! See its dedicated Datapack Page using the submenu above to learn more about customizing this feature!",
           "img": "/img/vtweaks/screenshots/datapack_anvil_recipes.png",
           "versions": [
             "1.19.2"
@@ -161,7 +161,7 @@
         },
         {
           "name": "Fluid Conversion Recipes",
-          "desc": "Convert one item to another by throwing it into some fluid (now with JEI integration!). By default, V-Tweaks includes a set of recipes for converting Concrete Powder to Concrete, but check its dedicated Datapack Page using the submenu above to learn more about customzing this feature!",
+          "desc": "Convert one item to another by throwing it into some fluid (now with JEI integration!). By default, V-Tweaks includes a set of recipes for converting Concrete Powder to Concrete, but check its dedicated Datapack Page using the submenu above to learn more about customizing this feature!",
           "img": "/img/vtweaks/screenshots/concrete_tweaks.gif",
           "versions": [
             "1.19.2"
