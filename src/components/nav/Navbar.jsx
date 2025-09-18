@@ -6,7 +6,7 @@ import NavItem from './NavItem';
 export default () => (
   <nav className="navbar navbar-expand-xl fixed-top navbar-dark bg-dark">
     <div className="container-fluid mw-100">
-      <a href="/" className="navbar-brand">
+      <a href="/" className="navbar-brand" aria-label="navbar-brand">
         <img src="/me.png" width="30" height="30" alt="" loading="lazy" />
       </a>
       <button
