@@ -44,6 +44,22 @@ export default () => (
           with the correct textures, OreDict names and more.
         </p>
       </div>
+      <div className="fade-in d-flex flex-row align-items-center justify-content-center">
+        <a href="https://discord.oitsjustjose.com" target="_blank" rel="noreferrer">
+          <img
+            className="image rounded footer"
+            src="/img/vtweaks/Discord.jpg"
+            alt="discord-icon"
+          />
+        </a>
+        <a href="https://patreon.com/oitsjustjose" target="_blank" rel="noreferrer">
+          <img
+            className="image rounded footer"
+            src="/img/vtweaks/Patreon.jpg"
+            alt="patreon-icon"
+          />
+        </a>
+      </div>
     </div>
   </CSSTransition>
 );

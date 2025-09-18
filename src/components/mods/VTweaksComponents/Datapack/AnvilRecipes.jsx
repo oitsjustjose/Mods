@@ -5,7 +5,16 @@ import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export default () => (
   <div>
     <div className="container">
-      <h1>Anvil Recipes</h1>
+      <h1>
+        Anvil Recipes
+      </h1>
+      <h2>
+        (
+        <code>1.18.2</code>
+        -
+        <code>current</code>
+        )
+      </h2>
 
       <p>
         The Anvil Recipe recipe type has been created especially for the purpose of advanced item

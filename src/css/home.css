@@ -60,3 +60,14 @@
 body {
   height: 100vh;
 }
+
+img.footer {
+  max-height: 48px;
+  margin: 0 0.5rem 1rem;
+  transition: filter ease-in-out 150ms;
+}
+
+img.footer:hover {
+  filter: brightness(125%);
+  transition: filter ease-in-out 150ms;
+}

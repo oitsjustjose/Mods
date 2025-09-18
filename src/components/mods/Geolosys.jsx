@@ -21,7 +21,6 @@ export default () => {
         </div>
 
         <div className="fluid container">
-
           <nav className="navbar navbar-expand navbar-light bg-light geolosys-navbar mt-2 mb-5">
             <div className="container-fluid mw-100">
               <div className="navbar-brand">
@@ -136,7 +135,22 @@ export default () => {
         {component === 'datapacks-archive' && (<DatapacksArchive />)}
         {component === 'config-archive' && (<ConfigArchive />)}
         {component === 'crafttweaker-archive' && (<CraftTweakerArchive />)}
-
+        <div className="fade-in d-flex flex-row align-items-center justify-content-center">
+          <a href="https://discord.oitsjustjose.com" target="_blank" rel="noreferrer">
+            <img
+              className="image rounded footer"
+              src="/img/vtweaks/Discord.jpg"
+              alt="discord-icon"
+            />
+          </a>
+          <a href="https://patreon.com/oitsjustjose" target="_blank" rel="noreferrer">
+            <img
+              className="image rounded footer"
+              src="/img/vtweaks/Patreon.jpg"
+              alt="patreon-icon"
+            />
+          </a>
+        </div>
       </div>
     </CSSTransition>
   );

@@ -6,6 +6,13 @@ export default () => (
   <div>
     <div className="container">
       <h1>Challenger Mob Data Packs</h1>
+      <h2>
+        (
+        <code>1.16.5 v3.6.0</code>
+        -
+        <code>current</code>
+        )
+      </h2>
 
       <p>
         Challenger Mobs can be removed / modified / overridden just like any other Vanilla

@@ -5,7 +5,16 @@ import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export default () => (
   <div>
     <div className="container">
-      <h1>Fluid Transformation Recipes</h1>
+      <h1>
+        Fluid Transformation Recipes
+      </h1>
+      <h2>
+        (
+        <code>1.19.2 v4.0.0</code>
+        -
+        <code>current</code>
+        )
+      </h2>
 
       <p>
         This recipe type allows you to convert one item to another by throwing it into water. JEI
