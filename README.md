@@ -1,4 +1,3 @@
-# Mods
+# This Repo has Moved!
 
-The purpose of this site is to provide a unified location for all of my mods which don't have their own sites.
-Made using SemanticUI
+This repository has been moved to a [new location!](https://git.oitsjustjose.com/me/Mods)
